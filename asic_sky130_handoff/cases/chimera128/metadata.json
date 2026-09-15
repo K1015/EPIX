@@ -1,0 +1,42 @@
+{
+  "schema": "asic_offline_case_v1",
+  "case_id": "chimera128",
+  "family": "Chimera",
+  "instance": "aadit1000_l4_a040.12001",
+  "logical_variables": 128,
+  "target": 66,
+  "objective": "maximize signed weighted cut",
+  "target_kind": "compositional planted frustrated-loop bound",
+  "software_policy": {
+    "field_refresh_delta": 0.05,
+    "max_hold_age": 2,
+    "beta_values": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      6.0,
+      6.5,
+      7.0
+    ],
+    "sweeps_per_beta": 937
+  },
+  "replay_seed_base": 2026091401280000,
+  "input_files": {
+    "graph.json": "8e72f57e88b868b84dbcd317886447af54201a1fa177f8025dd8c673b9eb7e12",
+    "software_spec.json": "3938e9022275d7ad40eef59540f39012be3ff9771bbbe5921d701dec0f1c53b3"
+  },
+  "certificate_file": "certificate.json",
+  "hardware_rng_engines": 4,
+  "hardware_rng_lanes": 4,
+  "hardware_rng_streams": 128,
+  "hardware_rng_state_bits": 4096,
+  "stored_pbits_per_rng_engine": 32
+}

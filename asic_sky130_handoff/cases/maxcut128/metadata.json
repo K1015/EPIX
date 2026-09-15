@@ -1,0 +1,40 @@
+{
+  "schema": "asic_offline_case_v1",
+  "case_id": "maxcut128",
+  "family": "MaxCut",
+  "instance": "krect128.18001",
+  "logical_variables": 128,
+  "target": 121,
+  "objective": "maximize signed weighted cut",
+  "target_kind": "exact_integer_dp_with_witness",
+  "software_policy": {
+    "field_refresh_delta": 0.05,
+    "max_hold_age": 2,
+    "beta_values": [
+      0.15,
+      0.21631884650965996,
+      0.28263769301931996,
+      0.3544333848982003,
+      0.4381881999253659,
+      0.5286153835808891,
+      0.6479811377393531,
+      0.8086415841043805,
+      1.0383345032522147,
+      1.397403385358092,
+      1.9119710327301631,
+      3.0
+    ],
+    "maximum_sweeps": 256
+  },
+  "input_files": {
+    "inputs/graph.json": "8c0ef2ebcaae8aa163cdfec648f4961f120fdef6e7709cc7f13129fbfa0d83ff",
+    "inputs/software_spec.json": "8885b8cd45f09c525598af6751616cd4e15c6a213970b05a7cb6fdd625555c8c",
+    "inputs/golden_outcomes.json": "4478a6f552ad9852a6e1689118a82cf6038683d9582d34c77880cd238ed71ea9"
+  },
+  "certificate_file": "inputs/certificate.json",
+  "physical_clock_gates_per_mode": 96,
+  "hardware_rng_lanes": 4,
+  "local_rng_computation_engines": 4,
+  "local_rng_state_words": 128,
+  "nodes_per_rng_engine": 32
+}

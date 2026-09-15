@@ -1,0 +1,594 @@
+{
+  "schema_version": 1,
+  "top": "chimera_solver",
+  "clock_port": "clk",
+  "source_icg": {
+    "cell": "sky130_fd_sc_hd__dlclkp_1",
+    "clock_pin": "CLK",
+    "enable_pin": "GATE",
+    "output_pin": "GCLK"
+  },
+  "simulation": {
+    "driver": "sim_main.cpp",
+    "prefix": "Vchimera_solver",
+    "vector_suffix": ".bin",
+    "compare_fields": [
+      "trial",
+      "success",
+      "final_success",
+      "sweeps",
+      "best_cut",
+      "final_cut",
+      "first_exact_sweep",
+      "local_words",
+      "visits",
+      "fired_cycles"
+    ],
+    "fresh_word_fields": [
+      "local_words"
+    ],
+    "setup_rng_words": 256,
+    "boundary": "Host setup supplies 128 fresh initialization words and 128 lane seed words. One RNG engine serves each bank of 32 stored spins, preserving separate stream states. All spins in a color commit after fresh requests finish. Search runs all 13118 sweeps, including after target success."
+  },
+  "input_evidence": [
+    "graph.json",
+    "software_spec.json",
+    "certificate.json"
+  ],
+  "rng_audit": {
+    "nets": [
+      {
+        "name": "lane[0].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[1].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[2].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[3].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[4].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[5].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[6].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[7].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[8].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[9].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[10].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[11].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[12].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[13].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[14].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[15].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[16].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[17].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[18].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[19].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[20].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[21].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[22].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[23].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[24].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[25].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[26].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[27].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[28].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[29].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[30].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[31].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[32].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[33].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[34].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[35].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[36].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[37].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[38].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[39].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[40].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[41].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[42].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[43].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[44].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[45].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[46].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[47].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[48].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[49].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[50].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[51].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[52].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[53].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[54].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[55].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[56].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[57].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[58].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[59].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[60].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[61].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[62].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[63].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[64].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[65].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[66].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[67].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[68].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[69].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[70].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[71].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[72].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[73].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[74].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[75].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[76].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[77].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[78].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[79].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[80].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[81].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[82].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[83].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[84].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[85].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[86].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[87].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[88].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[89].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[90].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[91].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[92].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[93].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[94].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[95].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[96].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[97].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[98].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[99].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[100].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[101].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[102].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[103].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[104].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[105].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[106].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[107].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[108].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[109].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[110].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[111].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[112].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[113].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[114].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[115].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[116].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[117].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[118].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[119].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[120].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[121].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[122].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[123].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[124].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[125].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[126].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[127].rng_state",
+        "width": 32
+      }
+    ],
+    "expected_registers": 4096,
+    "engine_count": 4,
+    "stream_count": 128,
+    "stored_pbits_per_engine": 32
+  },
+  "modes": {
+    "baseline": {
+      "rtl": [
+        "rtl/baseline/solver.sv"
+      ],
+      "include_dirs": [
+        "rtl/baseline"
+      ],
+      "defines": {
+        "EPIX_MODE": 0
+      },
+      "expected_icg_count": 256
+    },
+    "epix": {
+      "rtl": [
+        "rtl/epix/solver.sv"
+      ],
+      "include_dirs": [
+        "rtl/epix"
+      ],
+      "defines": {
+        "EPIX_MODE": 1
+      },
+      "expected_icg_count": 256
+    }
+  },
+  "rng_sharing": {
+    "stored_variables": 128,
+    "variables_per_engine": 32,
+    "local_engines": 4,
+    "stream_states": 128,
+    "auxiliary_engines": 0,
+    "words_per_engine_per_cycle": 1,
+    "mapping": "contiguous groups of 32 variables",
+    "kind": "banked"
+  }
+}

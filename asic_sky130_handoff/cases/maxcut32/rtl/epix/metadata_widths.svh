@@ -1,0 +1,37 @@
+function automatic integer metadata_field_width(input integer node);
+begin case(node)
+0: metadata_field_width=2;
+1: metadata_field_width=3;
+2: metadata_field_width=3;
+3: metadata_field_width=2;
+4: metadata_field_width=3;
+5: metadata_field_width=4;
+6: metadata_field_width=4;
+7: metadata_field_width=3;
+8: metadata_field_width=3;
+9: metadata_field_width=4;
+10: metadata_field_width=4;
+11: metadata_field_width=3;
+12: metadata_field_width=3;
+13: metadata_field_width=4;
+14: metadata_field_width=4;
+15: metadata_field_width=3;
+16: metadata_field_width=3;
+17: metadata_field_width=4;
+18: metadata_field_width=4;
+19: metadata_field_width=3;
+20: metadata_field_width=3;
+21: metadata_field_width=4;
+22: metadata_field_width=4;
+23: metadata_field_width=3;
+24: metadata_field_width=3;
+25: metadata_field_width=4;
+26: metadata_field_width=4;
+27: metadata_field_width=3;
+28: metadata_field_width=2;
+29: metadata_field_width=3;
+30: metadata_field_width=3;
+31: metadata_field_width=2;
+default: metadata_field_width=5;
+endcase end
+endfunction

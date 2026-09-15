@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "top": "categorical_solver",
+  "clock_port": "clk",
+  "source_icg": {
+    "cell": "sky130_fd_sc_hd__dlclkp_1",
+    "clock_pin": "CLK",
+    "enable_pin": "GATE",
+    "output_pin": "GCLK"
+  },
+  "rng_audit": {
+    "nets": [
+      {
+        "name": "rng_state_out",
+        "width": 32
+      }
+    ],
+    "expected_registers": 32
+  },
+  "simulation": {
+    "driver": "../../software/categorical_hardware/sized/sim_main.cpp",
+    "prefix": "Vcategorical_solver",
+    "compare_fields": [
+      "trial",
+      "success",
+      "flips",
+      "raw_words",
+      "reused_visits",
+      "refills",
+      "initial_draws",
+      "events"
+    ],
+    "fresh_word_fields": [
+      "raw_words"
+    ],
+    "setup_rng_words": 32,
+    "boundary": "Complete autonomous sequential probSAT solver for 32 logical assignment bits and 88 frozen CNF clauses, including mass ROM, ordered false-clause storage, break computation, physically gated32-bit RNG, conditioned sampler, gated per-clause EPIX residual caches, control and initialization. Ideal root clock; excludes host generation/transport, routed wires and physical root clock distribution."
+  },
+  "modes": {
+    "baseline": {
+      "rtl": [
+        "rtl/baseline/solver.sv"
+      ],
+      "include_dirs": [
+        "rtl/baseline"
+      ],
+      "defines": {
+        "EPIX_MODE": 0
+      },
+      "expected_icg_count": 1
+    },
+    "epix": {
+      "rtl": [
+        "rtl/epix/solver.sv"
+      ],
+      "include_dirs": [
+        "rtl/epix"
+      ],
+      "defines": {
+        "EPIX_MODE": 1
+      },
+      "expected_icg_count": 89
+    }
+  },
+  "rng_sharing": {
+    "kind": "sequential_categorical",
+    "stored_variables": 32,
+    "variables_per_engine": 32,
+    "local_engines": 1,
+    "stream_states": 1,
+    "auxiliary_engines": 0,
+    "words_per_engine_per_cycle": 1,
+    "mapping": "one sequential clause sampler for the whole assignment"
+  }
+}

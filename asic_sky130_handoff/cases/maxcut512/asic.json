@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "top": "corrected_solver",
+  "clock_port": "clk",
+  "source_icg": {
+    "cell": "sky130_fd_sc_hd__dlclkp_1",
+    "clock_pin": "CLK",
+    "enable_pin": "GATE",
+    "output_pin": "GCLK"
+  },
+  "modes": {
+    "baseline": {
+      "rtl": [
+        "rtl/baseline/solver.sv"
+      ],
+      "include_dirs": [
+        "rtl/baseline"
+      ],
+      "defines": {
+        "EPIX_MODE": 0
+      },
+      "expected_icg_count": 192
+    },
+    "epix": {
+      "rtl": [
+        "rtl/epix/solver.sv"
+      ],
+      "include_dirs": [
+        "rtl/epix"
+      ],
+      "defines": {
+        "EPIX_MODE": 1
+      },
+      "expected_icg_count": 192
+    }
+  },
+  "simulation": {
+    "driver": "sim_main.cpp",
+    "prefix": "Vcorrected_solver",
+    "compare_fields": [
+      "trial",
+      "success",
+      "sweeps",
+      "local_words",
+      "swap_words",
+      "icm_words",
+      "visits",
+      "events"
+    ],
+    "fresh_word_fields": [
+      "local_words",
+      "swap_words",
+      "icm_words"
+    ],
+    "setup_rng_words": 1282,
+    "boundary": "16 local RNG engines serve 512 independent node streams in contiguous 32-node banks; 48 replica states, unchanged swaps and clusters, ideal root clock and no routed interconnect."
+  },
+  "rng_audit": {
+    "nets": [
+      {
+        "name": "rng_bank[0].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[1].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[2].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[3].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[4].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[5].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[6].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[7].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[8].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[9].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[10].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[11].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[12].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[13].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[14].state",
+        "width": 1024
+      },
+      {
+        "name": "rng_bank[15].state",
+        "width": 1024
+      }
+    ],
+    "expected_registers": 16384
+  },
+  "rng_sharing": {
+    "stored_variables": 512,
+    "variables_per_engine": 32,
+    "local_engines": 16,
+    "stream_states": 512,
+    "auxiliary_engines": 2,
+    "words_per_engine_per_cycle": 1,
+    "mapping": "contiguous groups of 32 variables",
+    "kind": "banked"
+  }
+}

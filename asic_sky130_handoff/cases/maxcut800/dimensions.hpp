@@ -1,0 +1,5 @@
+#pragma once
+#define MAXCUT_N 800
+#define MAXCUT_REPLICAS 64
+#define MAXCUT_SWEEPS 4096
+#define MAXCUT_SCORE_BITS 13

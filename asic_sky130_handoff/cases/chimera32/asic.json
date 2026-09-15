@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "top": "chimera_solver",
+  "clock_port": "clk",
+  "source_icg": {
+    "cell": "sky130_fd_sc_hd__dlclkp_1",
+    "clock_pin": "CLK",
+    "enable_pin": "GATE",
+    "output_pin": "GCLK"
+  },
+  "simulation": {
+    "driver": "sim_main.cpp",
+    "prefix": "Vchimera_solver",
+    "vector_suffix": ".bin",
+    "compare_fields": [
+      "trial",
+      "success",
+      "final_success",
+      "sweeps",
+      "best_cut",
+      "final_cut",
+      "first_exact_sweep",
+      "local_words",
+      "visits",
+      "fired_cycles"
+    ],
+    "fresh_word_fields": [
+      "local_words"
+    ],
+    "setup_rng_words": 64,
+    "boundary": "Host setup supplies 32 fresh initialization words and 32 lane seed words. One RNG engine serves each bank of 32 stored spins, preserving separate stream states. All spins in a color commit after fresh requests finish. Search runs all 13118 sweeps, including after target success."
+  },
+  "input_evidence": [
+    "graph.json",
+    "software_spec.json",
+    "certificate.json"
+  ],
+  "rng_audit": {
+    "nets": [
+      {
+        "name": "lane[0].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[1].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[2].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[3].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[4].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[5].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[6].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[7].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[8].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[9].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[10].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[11].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[12].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[13].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[14].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[15].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[16].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[17].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[18].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[19].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[20].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[21].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[22].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[23].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[24].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[25].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[26].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[27].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[28].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[29].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[30].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[31].rng_state",
+        "width": 32
+      }
+    ],
+    "expected_registers": 1024,
+    "engine_count": 1,
+    "stream_count": 32,
+    "stored_pbits_per_engine": 32
+  },
+  "modes": {
+    "baseline": {
+      "rtl": [
+        "rtl/baseline/solver.sv"
+      ],
+      "include_dirs": [
+        "rtl/baseline"
+      ],
+      "defines": {
+        "EPIX_MODE": 0
+      },
+      "expected_icg_count": 64
+    },
+    "epix": {
+      "rtl": [
+        "rtl/epix/solver.sv"
+      ],
+      "include_dirs": [
+        "rtl/epix"
+      ],
+      "defines": {
+        "EPIX_MODE": 1
+      },
+      "expected_icg_count": 64
+    }
+  },
+  "rng_sharing": {
+    "stored_variables": 32,
+    "variables_per_engine": 32,
+    "local_engines": 1,
+    "stream_states": 32,
+    "auxiliary_engines": 0,
+    "words_per_engine_per_cycle": 1,
+    "mapping": "contiguous groups of 32 variables",
+    "kind": "banked"
+  }
+}

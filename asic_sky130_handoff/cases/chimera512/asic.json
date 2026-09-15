@@ -1,0 +1,2130 @@
+{
+  "schema_version": 1,
+  "top": "chimera_solver",
+  "clock_port": "clk",
+  "source_icg": {
+    "cell": "sky130_fd_sc_hd__dlclkp_1",
+    "clock_pin": "CLK",
+    "enable_pin": "GATE",
+    "output_pin": "GCLK"
+  },
+  "simulation": {
+    "driver": "sim_main.cpp",
+    "prefix": "Vchimera_solver",
+    "vector_suffix": ".bin",
+    "compare_fields": [
+      "trial",
+      "success",
+      "final_success",
+      "sweeps",
+      "best_cut",
+      "final_cut",
+      "first_exact_sweep",
+      "local_words",
+      "visits",
+      "fired_cycles"
+    ],
+    "fresh_word_fields": [
+      "local_words"
+    ],
+    "setup_rng_words": 1024,
+    "boundary": "Host setup supplies 512 fresh initialization words and 512 lane seed words. One RNG engine serves each bank of 32 stored spins, preserving separate stream states. All spins in a color commit after fresh requests finish. Search runs all 13118 sweeps, including after target success."
+  },
+  "input_evidence": [
+    "graph.json",
+    "software_spec.json",
+    "certificate.json"
+  ],
+  "rng_audit": {
+    "nets": [
+      {
+        "name": "lane[0].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[1].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[2].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[3].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[4].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[5].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[6].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[7].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[8].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[9].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[10].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[11].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[12].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[13].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[14].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[15].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[16].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[17].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[18].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[19].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[20].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[21].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[22].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[23].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[24].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[25].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[26].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[27].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[28].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[29].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[30].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[31].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[32].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[33].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[34].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[35].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[36].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[37].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[38].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[39].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[40].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[41].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[42].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[43].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[44].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[45].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[46].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[47].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[48].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[49].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[50].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[51].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[52].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[53].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[54].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[55].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[56].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[57].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[58].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[59].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[60].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[61].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[62].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[63].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[64].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[65].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[66].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[67].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[68].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[69].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[70].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[71].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[72].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[73].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[74].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[75].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[76].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[77].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[78].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[79].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[80].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[81].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[82].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[83].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[84].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[85].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[86].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[87].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[88].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[89].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[90].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[91].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[92].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[93].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[94].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[95].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[96].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[97].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[98].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[99].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[100].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[101].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[102].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[103].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[104].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[105].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[106].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[107].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[108].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[109].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[110].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[111].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[112].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[113].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[114].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[115].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[116].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[117].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[118].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[119].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[120].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[121].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[122].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[123].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[124].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[125].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[126].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[127].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[128].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[129].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[130].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[131].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[132].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[133].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[134].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[135].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[136].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[137].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[138].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[139].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[140].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[141].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[142].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[143].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[144].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[145].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[146].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[147].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[148].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[149].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[150].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[151].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[152].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[153].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[154].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[155].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[156].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[157].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[158].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[159].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[160].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[161].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[162].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[163].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[164].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[165].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[166].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[167].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[168].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[169].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[170].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[171].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[172].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[173].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[174].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[175].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[176].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[177].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[178].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[179].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[180].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[181].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[182].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[183].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[184].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[185].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[186].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[187].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[188].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[189].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[190].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[191].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[192].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[193].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[194].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[195].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[196].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[197].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[198].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[199].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[200].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[201].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[202].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[203].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[204].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[205].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[206].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[207].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[208].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[209].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[210].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[211].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[212].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[213].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[214].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[215].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[216].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[217].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[218].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[219].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[220].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[221].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[222].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[223].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[224].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[225].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[226].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[227].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[228].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[229].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[230].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[231].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[232].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[233].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[234].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[235].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[236].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[237].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[238].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[239].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[240].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[241].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[242].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[243].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[244].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[245].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[246].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[247].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[248].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[249].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[250].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[251].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[252].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[253].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[254].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[255].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[256].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[257].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[258].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[259].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[260].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[261].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[262].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[263].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[264].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[265].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[266].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[267].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[268].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[269].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[270].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[271].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[272].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[273].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[274].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[275].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[276].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[277].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[278].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[279].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[280].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[281].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[282].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[283].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[284].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[285].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[286].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[287].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[288].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[289].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[290].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[291].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[292].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[293].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[294].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[295].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[296].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[297].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[298].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[299].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[300].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[301].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[302].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[303].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[304].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[305].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[306].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[307].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[308].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[309].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[310].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[311].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[312].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[313].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[314].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[315].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[316].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[317].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[318].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[319].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[320].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[321].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[322].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[323].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[324].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[325].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[326].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[327].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[328].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[329].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[330].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[331].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[332].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[333].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[334].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[335].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[336].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[337].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[338].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[339].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[340].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[341].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[342].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[343].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[344].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[345].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[346].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[347].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[348].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[349].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[350].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[351].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[352].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[353].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[354].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[355].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[356].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[357].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[358].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[359].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[360].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[361].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[362].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[363].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[364].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[365].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[366].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[367].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[368].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[369].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[370].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[371].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[372].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[373].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[374].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[375].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[376].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[377].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[378].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[379].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[380].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[381].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[382].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[383].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[384].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[385].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[386].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[387].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[388].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[389].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[390].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[391].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[392].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[393].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[394].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[395].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[396].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[397].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[398].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[399].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[400].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[401].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[402].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[403].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[404].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[405].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[406].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[407].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[408].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[409].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[410].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[411].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[412].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[413].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[414].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[415].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[416].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[417].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[418].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[419].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[420].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[421].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[422].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[423].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[424].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[425].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[426].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[427].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[428].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[429].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[430].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[431].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[432].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[433].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[434].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[435].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[436].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[437].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[438].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[439].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[440].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[441].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[442].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[443].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[444].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[445].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[446].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[447].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[448].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[449].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[450].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[451].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[452].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[453].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[454].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[455].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[456].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[457].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[458].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[459].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[460].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[461].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[462].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[463].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[464].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[465].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[466].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[467].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[468].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[469].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[470].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[471].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[472].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[473].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[474].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[475].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[476].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[477].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[478].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[479].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[480].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[481].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[482].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[483].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[484].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[485].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[486].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[487].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[488].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[489].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[490].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[491].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[492].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[493].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[494].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[495].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[496].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[497].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[498].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[499].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[500].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[501].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[502].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[503].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[504].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[505].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[506].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[507].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[508].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[509].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[510].rng_state",
+        "width": 32
+      },
+      {
+        "name": "lane[511].rng_state",
+        "width": 32
+      }
+    ],
+    "expected_registers": 16384,
+    "engine_count": 16,
+    "stream_count": 512,
+    "stored_pbits_per_engine": 32
+  },
+  "modes": {
+    "baseline": {
+      "rtl": [
+        "rtl/baseline/solver.sv"
+      ],
+      "include_dirs": [
+        "rtl/baseline"
+      ],
+      "defines": {
+        "EPIX_MODE": 0
+      },
+      "expected_icg_count": 1024
+    },
+    "epix": {
+      "rtl": [
+        "rtl/epix/solver.sv"
+      ],
+      "include_dirs": [
+        "rtl/epix"
+      ],
+      "defines": {
+        "EPIX_MODE": 1
+      },
+      "expected_icg_count": 1024
+    }
+  },
+  "rng_sharing": {
+    "stored_variables": 512,
+    "variables_per_engine": 32,
+    "local_engines": 16,
+    "stream_states": 512,
+    "auxiliary_engines": 0,
+    "words_per_engine_per_cycle": 1,
+    "mapping": "contiguous groups of 32 variables",
+    "kind": "banked"
+  }
+}

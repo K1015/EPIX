@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "sky130_hd_tt_1v80_200ns",
+  "liberty": "sky130_fd_sc_hd__tt_025C_1v80.lib",
+  "liberty_sha256": "ec0e1067a35c8bf20b11e58d1e8ac53326067e4dac84a125cc1b917a3518d0d9",
+  "license": "LICENSE.sky130",
+  "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "voltage_v": 1.8,
+  "temperature_c": 25,
+  "corner": "tt",
+  "icg": {
+    "cell": "sky130_fd_sc_hd__dlclkp_1",
+    "clock_pin": "CLK",
+    "enable_pin": "GATE",
+    "output_pin": "GCLK",
+    "semantics": "latch_low_enable_high"
+  },
+  "buffer": {
+    "cell": "sky130_fd_sc_hd__buf_4",
+    "input_pin": "A",
+    "output_pin": "X"
+  },
+  "driving_cell": "sky130_fd_sc_hd__buf_4",
+  "clock": {
+    "period_ns": 200,
+    "transition_ns": 0.1,
+    "uncertainty_ns": 0.0,
+    "propagated": false
+  },
+  "io": {
+    "input_transition_ns": 0.1,
+    "input_delay_ns": 0.0,
+    "output_delay_ns": 0.0,
+    "output_load_pf": 0.01
+  },
+  "mapping": {
+    "max_clock_fanout": 16,
+    "abc_script": "../load_repaired.abc",
+    "clock_buffering": true,
+    "electrical_repair": true
+  },
+  "estimate_scope": "mapped_cell_power_without_interconnect_parasitics"
+}
