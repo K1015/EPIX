@@ -45,5 +45,3 @@ python3 vivado/build.py --from-rtl --out /path/to/new/build --jobs 4
 ```
 
 Copy the generated BIT/HWH/plain Tcl and `config.json` from `overlay/` together into a copy of the demo folder. Keep its notebook, runner and problem file. To use a different graph, update the FPGA sources and rebuild the image.
-
-Preserve vendor notices and file-specific licenses.
