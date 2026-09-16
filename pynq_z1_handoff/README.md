@@ -32,7 +32,7 @@ Both supplied and freshly rebuilt images passed on the board:
 | Policy | Optimum hits | Mean RNG words | Mean core time |
 |---|---:|---:|---:|
 | IID | 1000/1000 | 26650 | 23.984 ms |
-| EPIX | 1000/1000 | 18449.912 | 21.278 ms |
+| EPIX | 1000/1000 | 18450 | 21.278 ms |
 
 ## Rebuild (optional)
 
