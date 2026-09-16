@@ -52,5 +52,3 @@ All 200 campaign trials and six smoke trials matched the independent software re
 ## Files and further details
 
 `lfsr_iid/` and `lfsr_epix/` each contain a notebook, runner, matching BIT/HWH/Tcl files and `vivado/` rebuild sources. `software/` contains the reference model; `recorded/` and `figures/` contain the measured results.
-
-See the [technical reference](REFERENCE.md) for ROM generation, Vivado rebuilds, additional checks, problem formulation and the trace interface. [VALIDATION.json](VALIDATION.json) records package checks; [MANIFEST.json](MANIFEST.json) lists file hashes.
