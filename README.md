@@ -6,4 +6,6 @@ Anonymous artifact repository for DATE 2027.
 
 [`pynq_z1_handoff/`](pynq_z1_handoff/) contains the 26-variable Max-Cut, Chimera, SAT and XOR-SAT demos for PYNQ-Z1, with shared-LFSR IID/EPIX, notebooks and Vivado sources.
 
+[`date2027_text288_handoff/`](date2027_text288_handoff/) contains the 288-variable DATE2027 text demo for PYNQ-Z1, with software validation, IID/EPIX notebooks, FPGA images and recorded hardware results.
+
 [`hex_generation/`](hex_generation/) generates FPGA lookup tables from software problems and includes examples for Max-Cut, Chimera, SAT and XOR-SAT.

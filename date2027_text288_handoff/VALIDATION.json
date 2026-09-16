@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "recorded_board_trials": 206,
+  "recorded_board_frames": 2472,
+  "software_trials": 200,
+  "software_frames": 2400,
+  "scope": "Offline package checks, exact recorded board/reference comparison, direct rescoring, ROM regeneration and notebook syntax; no new FPGA run or Vivado build",
+  "fresh_software": {
+    "status": "PASS",
+    "trials": 200,
+    "frames": 2400,
+    "scope": "Fresh C++ software matches the recorded reference exactly; no FPGA access",
+    "files_sha256": {
+      "reference.csv": "3469c845e70e519cce788c86808c2bd0e1fd8dfdb51dd6ed1f51038b709968bb",
+      "trace_reference.csv": "97829785e7106f3a41ae9f3fdf34198f1a6cf629bff16ff9e08f1803c227a7a7"
+    }
+  },
+  "fresh_axi_simulation": {
+    "status": "PASS",
+    "scope": "Fresh AXI simulation; all frame words match the software reference",
+    "trials": [
+      {
+        "seed": 1560381426,
+        "mode": 0,
+        "result": "cycles=181251650 words=295200 final_energy=-540"
+      },
+      {
+        "seed": 1560381426,
+        "mode": 1,
+        "result": "cycles=176464835 words=150145 final_energy=-540"
+      }
+    ]
+  },
+  "runner_tests": {
+    "status": "PASS",
+    "policy_selection_cases": 8,
+    "fault_cleanup": true,
+    "hash_rejection": true,
+    "trial_boundaries": true,
+    "scope": "Recorded register replay only; no hardware was programmed"
+  },
+  "preservation": {
+    "existing_files_checked": 266,
+    "existing_files_changed": [
+      "README.md"
+    ],
+    "existing_demo_files_unchanged": true
+  },
+  "hardware_rerun": false,
+  "vivado_rebuild": false,
+  "git_file_visibility": "PASS",
+  "documentation_links": "PASS",
+  "board_python36_syntax": "PASS",
+  "relocation_test": {
+    "offline_verification": "PASS",
+    "fresh_software_trials": 2,
+    "fresh_software_frames": 24,
+    "path_contains_spaces": true
+  },
+  "frame_renderer": "PASS: captured frames rendered with a noninteractive backend and visually inspected"
+}

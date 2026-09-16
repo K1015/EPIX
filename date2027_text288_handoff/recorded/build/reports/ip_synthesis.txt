@@ -1,0 +1,401 @@
+
+*** Running vivado
+    with args -log design_1_maxcut26_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_maxcut26_0_0.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_maxcut26_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '<EXPERIMENT_ROOT>/build_text288_v1/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '<XILINX_ROOT>/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_maxcut26_0_0
+Command: synth_design -top design_1_maxcut26_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 686533
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [<XILINX_ROOT>/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-6901] identifier 'source_word' is used before its declaration [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_core.sv:60]
+INFO: [Synth 8-11241] undeclared symbol 'trace_valid', assumed default net type 'wire' [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:81]
+INFO: [Synth 8-11241] undeclared symbol 'trace_initial', assumed default net type 'wire' [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:81]
+INFO: [Synth 8-11241] undeclared symbol 'trace_node', assumed default net type 'wire' [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:82]
+INFO: [Synth 8-11241] undeclared symbol 'trace_sweep', assumed default net type 'wire' [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:82]
+WARNING: [Synth 8-8895] 'trace_valid' is already implicitly declared on line 81 [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:84]
+WARNING: [Synth 8-8895] 'trace_initial' is already implicitly declared on line 81 [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:84]
+WARNING: [Synth 8-8895] 'trace_node' is already implicitly declared on line 82 [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:85]
+WARNING: [Synth 8-8895] 'trace_sweep' is already implicitly declared on line 82 [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:86]
+WARNING: [Synth 8-6901] identifier 'trace_pending' is used before its declaration [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:69]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2442.109 ; gain = 371.770 ; free physical = 23548 ; free virtual = 50467
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1698.513; parent = 1554.659; children = 143.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3424.117; parent = 2445.082; children = 979.035
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_maxcut26_0_0' [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ip/design_1_maxcut26_0_0/synth/design_1_maxcut26_0_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'maxcut26_axi' [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'maxcut26_core' [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_core.sv:4]
+INFO: [Synth 8-3876] $readmem data file 'weights.hex' is read successfully [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_core.sv:72]
+INFO: [Synth 8-3876] $readmem data file 'quantization_rom.hex' is read successfully [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_core.sv:73]
+INFO: [Synth 8-3876] $readmem data file 'threshold_rom.hex' is read successfully [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_core.sv:74]
+INFO: [Synth 8-6157] synthesizing module 'lfsr32_word' [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/lfsr32_word.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr32_word' (0#1) [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/lfsr32_word.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'pbit_heatbath' [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/pbit_heatbath.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'pbit_heatbath' (0#1) [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/pbit_heatbath.sv:3]
+INFO: [Synth 8-226] default block is never used [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_core.sv:151]
+INFO: [Synth 8-6155] done synthesizing module 'maxcut26_core' (0#1) [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_core.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'text_trace' [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/text_trace.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'text_trace' (0#1) [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/text_trace.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'maxcut26_axi' (0#1) [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_maxcut26_0_0' (0#1) [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ip/design_1_maxcut26_0_0/synth/design_1_maxcut26_0_0.sv:53]
+WARNING: [Synth 8-6014] Unused sequential element write_error_reg was removed.  [<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.gen/sources_1/bd/design_1/ipshared/49b7/src/maxcut26_axi.sv:122]
+WARNING: [Synth 8-7129] Port s_axi_awprot[2] in module maxcut26_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[1] in module maxcut26_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[0] in module maxcut26_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[2] in module maxcut26_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[1] in module maxcut26_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[0] in module maxcut26_axi is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2862.539 ; gain = 792.199 ; free physical = 22744 ; free virtual = 49672
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1893.325; parent = 1749.518; children = 143.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3841.578; parent = 2862.543; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2874.414 ; gain = 804.074 ; free physical = 22828 ; free virtual = 49757
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1893.935; parent = 1750.137; children = 143.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3853.453; parent = 2874.418; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2874.414 ; gain = 804.074 ; free physical = 22876 ; free virtual = 49807
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1893.935; parent = 1750.137; children = 143.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3853.453; parent = 2874.418; children = 979.035
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2874.414 ; gain = 0.000 ; free physical = 22857 ; free virtual = 49790
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3026.133 ; gain = 0.000 ; free physical = 22753 ; free virtual = 49691
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3026.133 ; gain = 0.000 ; free physical = 22750 ; free virtual = 49688
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [<XILINX_ROOT>/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 22723 ; free virtual = 49666
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2033.821; parent = 1890.040; children = 143.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 22723 ; free virtual = 49666
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2033.821; parent = 1890.040; children = 143.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 22723 ; free virtual = 49666
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2033.821; parent = 1890.040; children = 143.854
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 26516 ; free virtual = 53453
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2033.821; parent = 1890.040; children = 181.140
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 9     
+	   2 Input   16 Bit       Adders := 6     
+	   3 Input   16 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 3     
++---Registers : 
+	              288 Bit    Registers := 4     
+	               32 Bit    Registers := 310   
+	               16 Bit    Registers := 7     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 292   
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 291   
+	                1 Bit    Registers := 26    
++---RAMs : 
+	               8K Bit	(256 X 32 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 3     
++---Muxes : 
+	   2 Input  512 Bit        Muxes := 1     
+	  15 Input  288 Bit        Muxes := 4     
+	   2 Input  288 Bit        Muxes := 6     
+	  15 Input   32 Bit        Muxes := 14    
+	   2 Input   32 Bit        Muxes := 11    
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 5     
+	  15 Input   16 Bit        Muxes := 5     
+	  15 Input   11 Bit        Muxes := 1     
+	  15 Input   10 Bit        Muxes := 1     
+	  15 Input    9 Bit        Muxes := 3     
+	   2 Input    9 Bit        Muxes := 3     
+	  15 Input    8 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	  15 Input    2 Bit        Muxes := 1     
+	  62 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 641   
+	  15 Input    1 Bit        Muxes := 903   
+	   3 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 5     
+	  62 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s_axi_awprot[2] in module design_1_maxcut26_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[1] in module design_1_maxcut26_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[0] in module design_1_maxcut26_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[2] in module design_1_maxcut26_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[1] in module design_1_maxcut26_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[0] in module design_1_maxcut26_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28361 ; free virtual = 55340
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2130.614; parent = 1927.844; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name           | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_maxcut26_0_0 | recorder/memory_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++----------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28283 ; free virtual = 55262
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2263.013; parent = 2060.242; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28283 ; free virtual = 55262
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2263.106; parent = 2060.336; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name           | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_maxcut26_0_0 | recorder/memory_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++----------------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/quant_data_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/weight_data_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/weight_data_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/weight_data_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/weight_data_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/weight_data_reg_1_0__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/weight_data_reg_1_1__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/weight_data_reg_1_2__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/solver/weight_data_reg_1_3__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/recorder/memory_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28325 ; free virtual = 55303
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2263.106; parent = 2060.336; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28389 ; free virtual = 55367
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2263.106; parent = 2060.336; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28389 ; free virtual = 55367
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2263.106; parent = 2060.336; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28392 ; free virtual = 55371
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2263.106; parent = 2060.336; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28392 ; free virtual = 55371
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2263.106; parent = 2060.336; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28406 ; free virtual = 55385
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2263.106; parent = 2060.336; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28410 ; free virtual = 55389
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2263.106; parent = 2060.336; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   140|
+|2     |LUT1     |    38|
+|3     |LUT2     |  1033|
+|4     |LUT3     |  1097|
+|5     |LUT4     |   508|
+|6     |LUT5     |   623|
+|7     |LUT6     |  7311|
+|8     |MUXF7    |  1752|
+|9     |MUXF8    |   752|
+|10    |RAMB18E1 |     2|
+|12    |RAMB36E1 |    44|
+|48    |FDRE     | 14586|
+|49    |FDSE     |    73|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28410 ; free virtual = 55389
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2263.106; parent = 2060.336; children = 202.771
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4005.172; parent = 3026.137; children = 979.035
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 3026.133 ; gain = 804.074 ; free physical = 28470 ; free virtual = 55449
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 3026.133 ; gain = 955.793 ; free physical = 28470 ; free virtual = 55449
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3026.133 ; gain = 0.000 ; free physical = 28608 ; free virtual = 55587
+INFO: [Netlist 29-17] Analyzing 2690 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'design_1_maxcut26_0_0' is not ideal for floorplanning, since the cellview 'maxcut26_core' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3026.133 ; gain = 0.000 ; free physical = 28580 ; free virtual = 55559
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 2ce87876
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:01:15 . Memory (MB): peak = 3026.133 ; gain = 1286.387 ; free physical = 28811 ; free virtual = 55790
+INFO: [Common 17-1381] The checkpoint '<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.runs/design_1_maxcut26_0_0_synth_1/design_1_maxcut26_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_maxcut26_0_0, cache-ID = 6e9db4bc87a01bc0
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+INFO: [Common 17-1381] The checkpoint '<EXPERIMENT_ROOT>/build_text288_v1/project/maxcut26_lfsr.runs/design_1_maxcut26_0_0_synth_1/design_1_maxcut26_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_maxcut26_0_0_utilization_synth.rpt -pb design_1_maxcut26_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 18:05:04 2026...
