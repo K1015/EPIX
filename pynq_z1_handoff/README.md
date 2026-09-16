@@ -35,14 +35,14 @@ The supplied images passed the paired 1000-trial board runs:
 
 | Family | Policy | Exact hits | Mean RNG words | Mean core time per trial |
 |---|---|---:|---:|---:|
-| Max-Cut | IID | 1000/1000 | 26650 | 23.984 ms |
-| Max-Cut | EPIX | 1000/1000 | 18450 | 21.278 ms |
-| Chimera | IID | 1000/1000 | 26650.000 | 23.984 ms |
-| Chimera | EPIX | 997/1000 | 16328.473 | 20.578 ms |
-| SAT | IID | 1000/1000 | 87.041 | 0.252 ms |
-| SAT | EPIX | 1000/1000 | 55.363 | 0.239 ms |
-| XOR-SAT | IID | 1000/1000 | 95.867 | 0.203 ms |
-| XOR-SAT | EPIX | 1000/1000 | 54.952 | 0.199 ms |
+| Max-Cut | IID | 1000/1000 | 26650.00 | 23.98 ms |
+| Max-Cut | EPIX | 1000/1000 | 18449.91 | 21.28 ms |
+| Chimera | IID | 1000/1000 | 26650.00 | 23.98 ms |
+| Chimera | EPIX | 997/1000 | 16328.47 | 20.58 ms |
+| SAT | IID | 1000/1000 | 87.04 | 0.25 ms |
+| SAT | EPIX | 1000/1000 | 55.36 | 0.24 ms |
+| XOR-SAT | IID | 1000/1000 | 95.87 | 0.20 ms |
+| XOR-SAT | EPIX | 1000/1000 | 54.95 | 0.20 ms |
 
 Mean core time is **per trial**. Ising trials always complete all 1024 sweeps; native SAT/XOR-SAT trials stop at a solution. The Chimera EPIX run uses fewer source words but has three misses in this seed set.
 
