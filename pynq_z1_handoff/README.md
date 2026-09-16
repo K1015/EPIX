@@ -34,8 +34,6 @@ Both supplied and freshly rebuilt images passed on the board:
 | IID | 1000/1000 | 26650 | 23.984 ms |
 | EPIX | 1000/1000 | 18449.912 | 21.278 ms |
 
-The fixed graph's optimum cut is 285. RNG counts measure source work; electrical energy was not measured.
-
 ## Rebuild (optional)
 
 The ready-to-run BIT/HWH/Tcl files are beside each notebook. FPGA sources and project files are in `vivado/`.
@@ -46,6 +44,6 @@ Install **Vivado 2022.2** with Zynq-7000 support, source `settings64.sh`, then r
 python3 vivado/build.py --from-rtl --out /path/to/new/build --jobs 4
 ```
 
-Copy the generated BIT/HWH/plain Tcl and `config.json` from `overlay/` together into a copy of the demo folder. Keep its notebook, runner and problem file. Other Vivado/PYNQ versions are untested. Changing `problem.json` alone does not change the FPGA graph.
+Copy the generated BIT/HWH/plain Tcl and `config.json` from `overlay/` together into a copy of the demo folder. Keep its notebook, runner and problem file. To use a different graph, update the FPGA sources and rebuild the image.
 
 Preserve vendor notices and file-specific licenses.
