@@ -66,4 +66,4 @@ Frames occur at sweeps `0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024`. Frame `
 
 Original trial data, software reference, completion receipts and comparison receipts are included unchanged. Host identities and process listings are omitted. Build reports replace private path prefixes and the host name with placeholders; [REPORTS.json](recorded/build/REPORTS.json) records both original and distributed hashes. BIT/HWH/Tcl, RTL and ROM contents are unchanged. Board time was stale; the experiment date, 2026-09-16 UTC, derives from the original host receipts.
 
-The package adapts runner options, notebooks and relative build paths. [VALIDATION.json](VALIDATION.json) records fresh packaging checks separately from historical physical measurements. No new board run or Vivado implementation was performed during packaging. `MANIFEST.json` covers all delivered files except itself and validation reports created by users.
+The package adapts runner options, notebooks and relative build paths. No new board run or Vivado implementation was performed during packaging.

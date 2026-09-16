@@ -72,9 +72,6 @@ def verify():
         output=Path(temp)/'generated'
         subprocess.check_call([sys.executable,str(ROOT/'hex_generation/generate.py'),'--output',str(output)])
         for p in output.glob('*.hex'):require(sha(p)==sha(ROOT/'lfsr_iid/vivado/ip_repo/maxcut26/src'/p.name),'Regenerated ROM '+p.name)
-    manifest=ROOT/'MANIFEST.json'
-    if manifest.exists():
-        for name,digest in json.loads(manifest.read_text())['files_sha256'].items():require(sha(ROOT/name)==digest,'Manifest '+name)
     return {'status':'PASS','recorded_board_trials':206,'recorded_board_frames':2472,'software_trials':200,'software_frames':2400,'scope':'Offline package checks, exact recorded board/reference comparison, direct rescoring, ROM regeneration and notebook syntax; no new FPGA run or Vivado build'}
 if __name__=='__main__':
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',type=Path);a=ap.parse_args();result=verify()

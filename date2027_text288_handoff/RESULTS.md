@@ -24,4 +24,4 @@ The DRC error gate passed. Warnings remain in the [build reports](recorded/build
 
 The [animation](figures/fpga_text_convergence.gif) and [hardware figure](figures/hardware_convergence.png) use the first preselected seed, 1560381426. One fixed inversion is applied to all frames in each trajectory. Curves show sampled current energy, which need not decrease monotonically. These pixels are binary states, not analog-voltage measurements.
 
-Evidence: [campaign summary](recorded/board/text288_100/SUMMARY.json), [raw trials](recorded/board/text288_100/trials.jsonl), [software comparison](recorded/board/text288_100/REFERENCE_COMPARISON.json), [build audit](recorded/build/BUILD_AUDIT.json), and [packaging validation](VALIDATION.json).
+Evidence: [campaign summary](recorded/board/text288_100/SUMMARY.json), [raw trials](recorded/board/text288_100/trials.jsonl), [software comparison](recorded/board/text288_100/REFERENCE_COMPARISON.json), and [build audit](recorded/build/BUILD_AUDIT.json).
