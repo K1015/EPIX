@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""Export a bounded PYNQ 2.1 metadata adapter from this overlay's HWH.
+
+The output is read by PYNQ's legacy Tcl parser. It is NOT a Vivado build
+script. The exact Vivado export is retained in vivado/tcl/ as *.vivado.tcl.
+Used by the Vivado build helper to generate matching deployment metadata.
+"""
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import re
+import xml.etree.ElementTree as ET
+import sys
+from validate_hwh_reset import validate as validate_hwh_reset
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def sha256(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def extract(hwh):
+    tree = ET.fromstring(hwh)
+    system = tree.find("SYSTEMINFO")
+    require(system is not None, "Missing HWH SYSTEMINFO")
+    expected_system = {
+        "ARCH": "zynq", "DEVICE": "7z020", "NAME": "design_1",
+        "PACKAGE": "clg400", "SPEEDGRADE": "-1",
+    }
+    require(system.attrib == expected_system, "Unexpected HWH target")
+    part = "xc" + system.get("DEVICE") + system.get("PACKAGE") + system.get("SPEEDGRADE")
+    require(part == "xc7z020clg400-1", "Unexpected part")
+    modules = {m.get("INSTANCE"): m for m in tree.iter("MODULE")}
+    ps = modules["ps7_0"]
+    accelerator = modules["maxcut26_0"]
+    require(ps.get("VLNV") == "xilinx.com:ip:processing_system7:5.5", "Unexpected PS7 IP")
+    require(accelerator.get("VLNV") == "date2027.local:user:maxcut26_axi:1.0", "Unexpected solver IP")
+    parameters = {p.get("NAME"): p.get("VALUE") for p in ps.find("PARAMETERS")}
+    require(parameters["PCW_USE_M_AXI_GP0"] == "1", "GP0 is not enabled")
+    clocks = []
+    for i in range(4):
+        clock = {
+            "index": i,
+            "enabled": int(parameters["PCW_FPGA_FCLK{}_ENABLE".format(i)]),
+            "divisor0": int(parameters["PCW_FCLK{}_PERIPHERAL_DIVISOR0".format(i)]),
+            "divisor1": int(parameters["PCW_FCLK{}_PERIPHERAL_DIVISOR1".format(i)]),
+            "source": parameters["PCW_FCLK{}_PERIPHERAL_CLKSRC".format(i)],
+            "hwh_actual_frequency_hz": int(parameters["PCW_CLK{}_FREQ".format(i)]),
+        }
+        require(clock["enabled"] == (1 if i == 0 else 0), "Unexpected FCLK enable")
+        require(1 <= clock["divisor0"] <= 63 and 1 <= clock["divisor1"] <= 63,
+                "FCLK divisor outside the PS register range")
+        require(clock["divisor0"] * clock["divisor1"] == (10 if i == 0 else 1),
+                "Unexpected FCLK divisor product")
+        require(clock["source"] == "IO PLL", "Unexpected FCLK source")
+        require(clock["hwh_actual_frequency_hz"] == (100000000 if i == 0 else 10000000),
+                "Unexpected HWH actual FCLK frequency")
+        clocks.append(clock)
+    pll_hz = int(float(parameters["PCW_IO_IO_PLL_FREQMHZ"]) * 1000000)
+    require(pll_hz // clocks[0]["divisor0"] // clocks[0]["divisor1"] == 100000000,
+            "Enabled FCLK divider frequency mismatch")
+    ports = {p.get("NAME"): p for p in ps.iter("PORT")}
+    require(ports["FCLK_CLK0"].get("CLKFREQUENCY") == "100000000", "PS clock mismatch")
+    require(ports["M_AXI_GP0_ACLK"].get("SIGNAME") == ports["FCLK_CLK0"].get("SIGNAME"),
+            "GP0 clock is not FCLK0")
+    axi_clock = next(p for p in accelerator.iter("PORT") if p.get("NAME") == "s_axi_aclk")
+    require(axi_clock.get("CLKFREQUENCY") == "100000000", "Solver clock mismatch")
+    require(axi_clock.get("SIGNAME") == ports["FCLK_CLK0"].get("SIGNAME"), "Solver clock net mismatch")
+    ranges = list(tree.iter("MEMRANGE"))
+    require(len(ranges) == 1, "Expected precisely one mapped PL peripheral")
+    address = dict(ranges[0].attrib)
+    expected_map = {
+        "INSTANCE": "maxcut26_0", "MASTERBUSINTERFACE": "M_AXI_GP0",
+        "SLAVEBUSINTERFACE": "S_AXI", "ADDRESSBLOCK": "reg0", "MEMTYPE": "REGISTER",
+    }
+    require(all(address.get(k) == v for k, v in expected_map.items()), "Unexpected GP0 memory map")
+    base = int(address["BASEVALUE"], 0)
+    size = int(address["HIGHVALUE"], 0) - base + 1
+    require(base == 0x43C00000 and size == 0x1000, "Unexpected solver address window")
+    return {
+        "part": part, "system": system.attrib, "vivado_version": tree.get("VIVADOVERSION"),
+        "ps_instance": ps.get("INSTANCE"), "ps_vlnv": ps.get("VLNV"),
+        "ip_instance": accelerator.get("INSTANCE"), "ip_vlnv": accelerator.get("VLNV"),
+        "clocks": clocks, "io_pll_frequency_hz": pll_hz, "clock_hz": 100000000,
+        "axi_base": base, "axi_range": size, "hwh_memory_range": address,
+    }
+
+
+def render(fields, hwh_sha):
+    lines = [
+        "# PYNQ 2.1 METADATA ADAPTER ONLY -- NOT A VIVADO REBUILD SCRIPT.",
+        "# PYNQ reads these lines; do not execute this file in Vivado.",
+        "# Exact same-build Vivado export: maxcut26_epix_lfsr26_100mhz.vivado.tcl",
+        "# Derived from matching maxcut26_epix_lfsr26_100mhz.hwh SHA-256: " + hwh_sha,
+        "# Generated by scripts/export_legacy_tcl.py; no RTL or bitstream changes.",
+        "create_project -part " + fields["part"] + " solver_metadata .",
+        "set {ps_instance} [ create_bd_cell -type ip -vlnv {ps_vlnv} {ps_instance} ]".format(**fields),
+        "set {ip_instance} [ create_bd_cell -type ip -vlnv {ip_vlnv} {ip_instance} ]".format(**fields),
+        "set_property -dict [list",
+    ]
+    for clock in fields["clocks"]:
+        i = clock["index"]
+        lines.append("  CONFIG.PCW_FCLK{}_PERIPHERAL_DIVISOR0 {{{}}} \\".format(i, clock["divisor0"]))
+        lines.append("  CONFIG.PCW_FCLK{}_PERIPHERAL_DIVISOR1 {{{}}} \\".format(i, clock["divisor1"]))
+        lines.append("  CONFIG.PCW_FPGA_FCLK{}_ENABLE {{{}}} \\".format(i, clock["enabled"]))
+    lines.extend([
+        "] $" + fields["ps_instance"],
+        ("create_bd_addr_seg -range 0x{axi_range:08X} -offset 0x{axi_base:08X} "
+         "[get_bd_addr_spaces {ps_instance}/Data] "
+         "[get_bd_addr_segs {ip_instance}/S_AXI/reg0] SEG_maxcut26").format(**fields),
+        "",
+    ])
+    # PYNQ 2.1 scans the first xc.. substring of the create_project line.
+    # Keep the part first: a project name containing "maxcut" would match xcut.
+    project_line = next(line for line in lines if line.startswith("create_project "))
+    family_match = re.search(r"xc.{2}", project_line)
+    require(family_match is not None and family_match.group(0) == "xc7z",
+            "Legacy PYNQ family regex must resolve the Zynq part first")
+    return "\n".join(lines).encode("ascii")
+
+
