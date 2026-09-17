@@ -1,0 +1,7 @@
++incdir+cases/3hypergraph_sat288_instance1/src
++define+A2_PHYSICAL
+cases/3hypergraph_sat288_instance1/baseline/sat_baseline.sv
+cases/3hypergraph_sat288_instance1/src/a2_core.sv
+cases/3hypergraph_sat288_instance1/src/a2_icg.sv
+cases/3hypergraph_sat288_instance1/src/a2_coeff_sram.sv
+cases/3hypergraph_sat288_instance1/src/technology.sv

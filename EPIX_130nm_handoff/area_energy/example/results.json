@@ -1,0 +1,389 @@
+{
+  "case": "chimera_maxcut128_instance1",
+  "operating_point": {
+    "process": "SKY130 HD TT plus SRAM22 TT",
+    "voltage_v": 1.8,
+    "temperature_c": 25,
+    "period_ns": 200,
+    "frequency_hz": 5000000,
+    "activity_method": "Zero-delay mapped-pin activity; explicit coefficient SRAM joint clock/control edge integration; no wire parasitics or glitch activity."
+  },
+  "archived_data_sha256": "7ee55c85fba5b367cc971500edd8e0794c7f6042ad98d4b3faf48c2bec961f0f",
+  "modes": {
+    "baseline": {
+      "waveform_example": {
+        "scope": "New short RTL waveform; SRAM internal energy only, using archived mapped SRAM slews.",
+        "waveform_sha256": "bca56fafbfa0cca2710e71083c55e895a6d54395e7272afce7d72cd5d3bfb1b0",
+        "signal_widths": {
+          "clk": 1,
+          "rst": 1,
+          "measure": 1,
+          "search": 1,
+          "sram_clk": 1,
+          "sram_ce": 1,
+          "sram_we": 1,
+          "rng_clock": 1,
+          "rng_state": 32,
+          "lane_visit": 1,
+          "lane_refresh": 1,
+          "lane_slot": 7,
+          "pbit0_consume": 1,
+          "local_words": 32,
+          "node_visits": 32
+        },
+        "windows": {
+          "setup_only": {
+            "duration_ps": 52800000.0,
+            "root_clock_edges": 528,
+            "rng_clock_edges": 6,
+            "rng_state_bit_transitions": 16,
+            "sram_edge_counts": {
+              "rise_ce0_we0": 0,
+              "rise_ce0_we1": 0,
+              "rise_ce1_we0": 0,
+              "rise_ce1_we1": 128,
+              "fall_ce0_we0": 0,
+              "fall_ce0_we1": 0,
+              "fall_ce1_we0": 0,
+              "fall_ce1_we1": 128
+            },
+            "duration_us": 52.8,
+            "cycles": 264,
+            "sram_internal_energy_nj": 0.49862617600000003,
+            "sram_internal_average_power_uw": 9.443677575757578,
+            "edge_energy_pj": {
+              "rise_ce0_we0": 1.4432019999999999,
+              "rise_ce0_we1": 2.7193199999999997,
+              "rise_ce1_we0": 9.931349999999998,
+              "rise_ce1_we1": 2.75703,
+              "fall_ce0_we0": 0.9287000000000001,
+              "fall_ce0_we1": 0.97322,
+              "fall_ce1_we0": 1.1094000000000002,
+              "fall_ce1_we1": 1.138487
+            }
+          },
+          "search": {
+            "duration_ps": 2118800000.0,
+            "root_clock_edges": 21188,
+            "rng_clock_edges": 32,
+            "rng_state_bit_transitions": 244,
+            "sram_edge_counts": {
+              "rise_ce0_we0": 0,
+              "rise_ce0_we1": 0,
+              "rise_ce1_we0": 2176,
+              "rise_ce1_we1": 0,
+              "fall_ce0_we0": 2176,
+              "fall_ce0_we1": 0,
+              "fall_ce1_we0": 0,
+              "fall_ce1_we1": 0
+            },
+            "duration_us": 2118.8,
+            "cycles": 10594,
+            "sram_internal_energy_nj": 23.6314688,
+            "sram_internal_average_power_uw": 11.153232395695676,
+            "edge_energy_pj": {
+              "rise_ce0_we0": 1.4432019999999999,
+              "rise_ce0_we1": 2.7193199999999997,
+              "rise_ce1_we0": 9.931349999999998,
+              "rise_ce1_we1": 2.75703,
+              "fall_ce0_we0": 0.9287000000000001,
+              "fall_ce0_we1": 0.97322,
+              "fall_ce1_we0": 1.1094000000000002,
+              "fall_ce1_we1": 1.138487
+            }
+          },
+          "with_setup": {
+            "duration_ps": 2171600000.0,
+            "root_clock_edges": 21716,
+            "rng_clock_edges": 38,
+            "rng_state_bit_transitions": 260,
+            "sram_edge_counts": {
+              "rise_ce0_we0": 0,
+              "rise_ce0_we1": 0,
+              "rise_ce1_we0": 2176,
+              "rise_ce1_we1": 128,
+              "fall_ce0_we0": 2176,
+              "fall_ce0_we1": 0,
+              "fall_ce1_we0": 0,
+              "fall_ce1_we1": 128
+            },
+            "duration_us": 2171.6,
+            "cycles": 10858,
+            "sram_internal_energy_nj": 24.130094976,
+            "sram_internal_average_power_uw": 11.111666502118252,
+            "edge_energy_pj": {
+              "rise_ce0_we0": 1.4432019999999999,
+              "rise_ce0_we1": 2.7193199999999997,
+              "rise_ce1_we0": 9.931349999999998,
+              "rise_ce1_we1": 2.75703,
+              "fall_ce0_we0": 0.9287000000000001,
+              "fall_ce0_we1": 0.97322,
+              "fall_ce1_we0": 1.1094000000000002,
+              "fall_ce1_we1": 1.138487
+            }
+          }
+        },
+        "clock_slew_ns": {
+          "rise_ns": 0.339123,
+          "fall_ns": 0.178619
+        },
+        "slew_source": "hardware/epix_a2_optimization/event_gated/results/chimera128/iid/power_saif/profile_s16_t0/result.json",
+        "local_words": 2048,
+        "node_visits": 2048,
+        "relative_latencies_and_sram_activity_match_archived_short_trial": true
+      },
+      "archived_native": {
+        "scope": "Recalculated from archived mapped power components and cell counts; not from the new RTL VCD.",
+        "windows": {
+          "search": {
+            "duration_us": 1694897.4,
+            "cycles": 8474487,
+            "dynamic_energy_nj": 170880.31928679682,
+            "leakage_energy_nj": 773.8075238160164,
+            "total_energy_nj": 171654.12681061283,
+            "dynamic_power_uw": 100.82045042183486,
+            "leakage_power_uw": 0.4565512483623,
+            "total_power_uw": 101.27700167019717,
+            "components_nj": {
+              "standard_cell_internal": 89137.40737805772,
+              "all_output_switching": 60317.830151148344,
+              "all_leakage": 773.8075238160164,
+              "root_clock_input_charging": 3188.5382759907607,
+              "sram_internal": 18236.543481599998
+            }
+          },
+          "setup_only": {
+            "duration_us": 52.8,
+            "cycles": 264,
+            "dynamic_energy_nj": 6.903695963786559,
+            "leakage_energy_nj": 0.024005906016100798,
+            "total_energy_nj": 6.927701869802659,
+            "dynamic_power_uw": 130.75181749595757,
+            "leakage_power_uw": 0.454657310911,
+            "total_power_uw": 131.20647480686856,
+            "components_nj": {
+              "standard_cell_internal": 3.634035403956672,
+              "all_output_switching": 2.671703993109888,
+              "all_leakage": 0.024005906016100798,
+              "root_clock_input_charging": 0.09933039072000002,
+              "sram_internal": 0.49862617600000003
+            }
+          },
+          "with_setup": {
+            "duration_us": 1694950.2000000002,
+            "cycles": 8474751,
+            "dynamic_energy_nj": 170886.0741251586,
+            "leakage_energy_nj": 773.8314370284658,
+            "total_energy_nj": 171659.90556218705,
+            "dynamic_power_uw": 100.82070501254762,
+            "leakage_power_uw": 0.4565511346755,
+            "total_power_uw": 101.27725614722311,
+            "components_nj": {
+              "standard_cell_internal": 89140.1857573774,
+              "all_output_switching": 60320.208653623704,
+              "all_leakage": 773.8314370284658,
+              "root_clock_input_charging": 3188.637606381481,
+              "sram_internal": 18237.042107775997
+            }
+          }
+        },
+        "area": {
+          "standard_cells_um2": 492651.24159999983,
+          "sram_um2": 108741.0,
+          "total_um2": 601392.2415999998,
+          "sram_macros": 1
+        },
+        "native_complete": true,
+        "target_hit": true
+      }
+    },
+    "epix": {
+      "waveform_example": {
+        "scope": "New short RTL waveform; SRAM internal energy only, using archived mapped SRAM slews.",
+        "waveform_sha256": "7195d1fe9357d1a520d707d510437aa970a00a274a811f21967e3c583e4d57e3",
+        "signal_widths": {
+          "clk": 1,
+          "rst": 1,
+          "measure": 1,
+          "search": 1,
+          "sram_clk": 1,
+          "sram_ce": 1,
+          "sram_we": 1,
+          "rng_clock": 1,
+          "rng_state": 32,
+          "lane_visit": 1,
+          "lane_refresh": 1,
+          "lane_slot": 7,
+          "pbit0_consume": 1,
+          "local_words": 32,
+          "node_visits": 32
+        },
+        "windows": {
+          "setup_only": {
+            "duration_ps": 52800000.0,
+            "root_clock_edges": 528,
+            "rng_clock_edges": 6,
+            "rng_state_bit_transitions": 16,
+            "sram_edge_counts": {
+              "rise_ce0_we0": 0,
+              "rise_ce0_we1": 0,
+              "rise_ce1_we0": 0,
+              "rise_ce1_we1": 128,
+              "fall_ce0_we0": 0,
+              "fall_ce0_we1": 0,
+              "fall_ce1_we0": 0,
+              "fall_ce1_we1": 128
+            },
+            "duration_us": 52.8,
+            "cycles": 264,
+            "sram_internal_energy_nj": 0.49862617600000003,
+            "sram_internal_average_power_uw": 9.443677575757578,
+            "edge_energy_pj": {
+              "rise_ce0_we0": 1.4432019999999999,
+              "rise_ce0_we1": 2.7193199999999997,
+              "rise_ce1_we0": 9.931349999999998,
+              "rise_ce1_we1": 2.75703,
+              "fall_ce0_we0": 0.9287000000000001,
+              "fall_ce0_we1": 0.97322,
+              "fall_ce1_we0": 1.1094000000000002,
+              "fall_ce1_we1": 1.138487
+            }
+          },
+          "search": {
+            "duration_ps": 2003400000.0,
+            "root_clock_edges": 20034,
+            "rng_clock_edges": 28,
+            "rng_state_bit_transitions": 215,
+            "sram_edge_counts": {
+              "rise_ce0_we0": 0,
+              "rise_ce0_we1": 0,
+              "rise_ce1_we0": 2176,
+              "rise_ce1_we1": 0,
+              "fall_ce0_we0": 2176,
+              "fall_ce0_we1": 0,
+              "fall_ce1_we0": 0,
+              "fall_ce1_we1": 0
+            },
+            "duration_us": 2003.3999999999999,
+            "cycles": 10017,
+            "sram_internal_energy_nj": 23.6314688,
+            "sram_internal_average_power_uw": 11.795681741040232,
+            "edge_energy_pj": {
+              "rise_ce0_we0": 1.4432019999999999,
+              "rise_ce0_we1": 2.7193199999999997,
+              "rise_ce1_we0": 9.931349999999998,
+              "rise_ce1_we1": 2.75703,
+              "fall_ce0_we0": 0.9287000000000001,
+              "fall_ce0_we1": 0.97322,
+              "fall_ce1_we0": 1.1094000000000002,
+              "fall_ce1_we1": 1.138487
+            }
+          },
+          "with_setup": {
+            "duration_ps": 2056200000.0,
+            "root_clock_edges": 20562,
+            "rng_clock_edges": 34,
+            "rng_state_bit_transitions": 231,
+            "sram_edge_counts": {
+              "rise_ce0_we0": 0,
+              "rise_ce0_we1": 0,
+              "rise_ce1_we0": 2176,
+              "rise_ce1_we1": 128,
+              "fall_ce0_we0": 2176,
+              "fall_ce0_we1": 0,
+              "fall_ce1_we0": 0,
+              "fall_ce1_we1": 128
+            },
+            "duration_us": 2056.2,
+            "cycles": 10281,
+            "sram_internal_energy_nj": 24.130094976,
+            "sram_internal_average_power_uw": 11.735285952728335,
+            "edge_energy_pj": {
+              "rise_ce0_we0": 1.4432019999999999,
+              "rise_ce0_we1": 2.7193199999999997,
+              "rise_ce1_we0": 9.931349999999998,
+              "rise_ce1_we1": 2.75703,
+              "fall_ce0_we0": 0.9287000000000001,
+              "fall_ce0_we1": 0.97322,
+              "fall_ce1_we0": 1.1094000000000002,
+              "fall_ce1_we1": 1.138487
+            }
+          }
+        },
+        "clock_slew_ns": {
+          "rise_ns": 0.339123,
+          "fall_ns": 0.178619
+        },
+        "slew_source": "hardware/epix_a2_optimization/event_gated/results/chimera128/epix/power_saif/profile_s16_t0/result.json",
+        "local_words": 1471,
+        "node_visits": 2048,
+        "relative_latencies_and_sram_activity_match_archived_short_trial": true
+      },
+      "archived_native": {
+        "scope": "Recalculated from archived mapped power components and cell counts; not from the new RTL VCD.",
+        "windows": {
+          "search": {
+            "duration_us": 1519869.2,
+            "cycles": 7599346,
+            "dynamic_energy_nj": 133077.52542548502,
+            "leakage_energy_nj": 715.5524158950184,
+            "total_energy_nj": 133793.07784138003,
+            "dynamic_power_uw": 87.5585382120284,
+            "leakage_power_uw": 0.47079868181750006,
+            "total_power_uw": 88.0293368938459,
+            "components_nj": {
+              "standard_cell_internal": 63435.42660529664,
+              "all_output_switching": 48546.290159056305,
+              "all_leakage": 715.5524158950184,
+              "root_clock_input_charging": 2859.2651795320808,
+              "sram_internal": 18236.543481599998
+            }
+          },
+          "setup_only": {
+            "duration_us": 52.8,
+            "cycles": 264,
+            "dynamic_energy_nj": 7.135731717802384,
+            "leakage_energy_nj": 0.02464241210873376,
+            "total_energy_nj": 7.1603741299111165,
+            "dynamic_power_uw": 135.1464340492876,
+            "leakage_power_uw": 0.4667123505442,
+            "total_power_uw": 135.61314639983178,
+            "components_nj": {
+              "standard_cell_internal": 3.8214207423152637,
+              "all_output_switching": 2.71635440876712,
+              "all_leakage": 0.02464241210873376,
+              "root_clock_input_charging": 0.09933039072000002,
+              "sram_internal": 0.49862617600000003
+            }
+          },
+          "with_setup": {
+            "duration_us": 1519922.0,
+            "cycles": 7599610,
+            "dynamic_energy_nj": 133084.2627093947,
+            "leakage_energy_nj": 715.5770580715827,
+            "total_energy_nj": 133799.8397674663,
+            "dynamic_power_uw": 87.559929199916,
+            "leakage_power_uw": 0.47079853970899993,
+            "total_power_uw": 88.030727739625,
+            "components_nj": {
+              "standard_cell_internal": 63439.083202754446,
+              "all_output_switching": 48548.77288894149,
+              "all_leakage": 715.5770580715827,
+              "root_clock_input_charging": 2859.3645099228006,
+              "sram_internal": 18237.042107775997
+            }
+          }
+        },
+        "area": {
+          "standard_cells_um2": 532767.2159999997,
+          "sram_um2": 108741.0,
+          "total_um2": 641508.2159999997,
+          "sram_macros": 1
+        },
+        "native_complete": true,
+        "target_hit": true
+      }
+    }
+  },
+  "native_total_energy_saving_percent": 22.055275907748427
+}

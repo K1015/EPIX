@@ -2,6 +2,8 @@
 
 Anonymous artifact repository for DATE 2027.
 
+[`EPIX_130nm_handoff/`](EPIX_130nm_handoff/) contains baseline/EPIX A2 RTL for 16 Max-Cut, Chimera, SAT and XOR-SAT cases at 128, 288, 512 and 800 variables, with simulation code, SKY130 energy/area evaluation and a waveform example.
+
 [`asic_sky130_handoff/`](asic_sky130_handoff/) contains software-verified IID/EPIX RTL for 20 problem instances and the SKY130 experiment setup.
 
 [`pynq_z1_handoff/`](pynq_z1_handoff/) contains the 26-variable Max-Cut, Chimera, SAT and XOR-SAT demos for PYNQ-Z1, with shared-LFSR IID/EPIX, notebooks and Vivado sources.

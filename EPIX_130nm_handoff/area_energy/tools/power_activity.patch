@@ -1,0 +1,21 @@
+--- a/power/Power.cc
++++ b/power/Power.cc
+@@ -965,6 +965,18 @@
+         setActivity(pin, input_activity_);
+       Vertex *vertex = graph_->pinDrvrVertex(pin);
+       bfs.enqueueAdjacentVertices(vertex, scene_->mode());
++    }
++  }
++  // Explicit measured activities can belong to non-root pins, including
++  // memory outputs without Liberty sequential/function declarations. Seed
++  // these pins as well, so their loads and internal-power consumers observe
++  // the supplied activities rather than an unknown default.
++  for (auto &[pin, activity] : user_activity_map_) {
++    if (!activity_map_.contains(pin)) {
++      setActivity(pin, activity);
++      Vertex *vertex = graph_->pinDrvrVertex(pin);
++      if (vertex)
++        bfs.enqueueAdjacentVertices(vertex, scene_->mode());
+     }
+   }
+ }

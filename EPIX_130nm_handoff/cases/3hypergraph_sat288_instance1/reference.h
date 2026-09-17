@@ -1,0 +1,6 @@
+#define SITES 288
+#define MEMORY_WORDS 5240
+#define FIELD_BITS 8
+#define AGE_BITS 2
+#define FIELD_BOUND_VALUE 24
+#define FACTOR_COUNT 1238
