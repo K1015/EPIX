@@ -1,0 +1,8877 @@
+{
+  "schema_version": "epix.problem.v1",
+  "instance_id": "3hypergraph_sat512_instance15",
+  "group": "3hypergraph_sat512",
+  "original_instance_id": "sat_512_14",
+  "original_cohort_key": "sat_512_14",
+  "source_family": "sat",
+  "problem_type": "3sat",
+  "n_variables": 512,
+  "node_index_base": 0,
+  "variable_domain": [0, 1],
+  "objective": {
+    "name": "unsatisfied_sat_clauses",
+    "sense": "minimize",
+    "target": 0,
+    "formula": "count of clauses with no true literal",
+    "reference_energy": "unsatisfied clause count"
+  },
+  "topology": {
+    "name": "Random 3-uniform hypergraph with planted 3-SAT clauses",
+    "variables": 512,
+    "edges_or_factors": 2202,
+    "degree_histogram": {
+      "1": 1,
+      "3": 1,
+      "5": 6,
+      "6": 10,
+      "7": 15,
+      "8": 22,
+      "9": 38,
+      "10": 45,
+      "11": 51,
+      "12": 49,
+      "13": 62,
+      "14": 48,
+      "15": 40,
+      "16": 39,
+      "17": 29,
+      "18": 22,
+      "19": 14,
+      "20": 8,
+      "21": 5,
+      "22": 3,
+      "24": 1,
+      "25": 1,
+      "26": 1,
+      "27": 1
+    },
+    "clause_density": 4.30078125
+  },
+  "construction": {
+    "method": "Conventional planted random 3-SAT",
+    "generator_seed": 190512014,
+    "rng": "numpy.random.default_rng, PCG64",
+    "source_campaign": "planted_sat_full_v19",
+    "generator_source": "experiments/common_pbits_800_v2/planted_sat_full_v19/generate.py",
+    "clause_count": 2202,
+    "clause_count_rule": "round(4.3 * N)",
+    "variable_selection": "Three distinct variables sampled uniformly for each clause",
+    "literal_selection": "Uniform choice among the seven patterns satisfying a uniformly sampled planted assignment",
+    "repeated_variable_triples": "Allowed across clauses; each clause is a separate constraint",
+    "generator_source_sha256": "c68836219dc103afc3e47b52c6b0ecec73d41e4d7b64fa5593bbd04e6d0bc1d0"
+  },
+  "mathematical_problem_sha256": "a88d5dab2f766bfa0aa9df8f3801553fb9530184e3214a0849cf0867ba7d7c28",
+  "asic_case_id": null,
+  "literal_sign_convention": "+1 means x; -1 means NOT x",
+  "constraints": [
+    {
+      "variables": [287, 326, 79],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [364, 220, 480],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [40, 294, 240],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [112, 165, 93],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [49, 342, 231],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [465, 130, 13],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [355, 405, 380],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [59, 19, 346],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [486, 170, 413],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [320, 148, 33],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [77, 402, 424],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [201, 480, 139],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [229, 307, 502],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [161, 315, 454],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [185, 463, 12],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [276, 118, 454],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [97, 447, 468],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [353, 377, 429],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [329, 494, 477],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [102, 500, 295],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [4, 69, 389],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [264, 205, 303],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [372, 358, 0],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [105, 400, 434],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [421, 86, 19],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [205, 291, 307],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [222, 150, 346],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [316, 486, 199],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [413, 392, 406],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [511, 347, 258],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [156, 210, 492],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [224, 470, 178],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [261, 75, 169],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [34, 35, 105],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [315, 329, 459],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [263, 466, 354],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [83, 409, 361],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [143, 152, 127],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [239, 424, 383],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [204, 250, 326],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [62, 13, 109],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [300, 484, 205],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [5, 289, 129],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [5, 480, 127],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [428, 501, 474],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [130, 320, 357],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [464, 278, 140],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [505, 269, 432],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [164, 435, 290],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [479, 210, 223],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [111, 114, 107],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [71, 154, 85],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [224, 283, 448],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [480, 58, 470],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [124, 337, 480],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [405, 101, 463],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [287, 79, 474],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [310, 146, 486],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [400, 487, 84],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [128, 483, 432],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [380, 60, 87],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [426, 347, 358],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [266, 65, 182],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [165, 58, 406],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [262, 236, 235],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [285, 213, 250],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [132, 149, 412],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [276, 56, 285],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [482, 199, 173],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [318, 511, 236],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [12, 488, 472],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [186, 73, 434],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [443, 496, 85],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [256, 343, 178],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [62, 410, 436],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [104, 184, 507],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [305, 70, 478],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [87, 312, 191],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [500, 265, 443],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [80, 492, 490],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [435, 485, 76],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [427, 500, 240],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [282, 413, 498],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [173, 23, 405],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [152, 249, 83],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [78, 41, 99],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [308, 35, 387],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [473, 343, 344],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [445, 342, 419],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [411, 81, 488],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [214, 267, 20],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [12, 473, 98],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [290, 342, 339],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [147, 449, 404],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [132, 66, 7],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [282, 341, 501],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [284, 152, 344],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [228, 44, 485],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [383, 73, 127],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [444, 391, 247],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [233, 465, 340],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [343, 148, 46],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [173, 115, 10],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [498, 303, 465],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [400, 441, 388],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [210, 77, 142],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [242, 461, 407],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [446, 506, 392],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [247, 366, 194],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [449, 266, 87],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [374, 175, 21],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [326, 48, 9],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [476, 85, 193],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [318, 39, 174],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [88, 119, 99],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [277, 140, 379],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [460, 277, 341],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [348, 73, 20],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [274, 431, 220],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [50, 287, 407],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [335, 18, 297],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [80, 28, 461],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [228, 102, 423],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [226, 410, 298],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [190, 314, 44],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [53, 316, 468],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [73, 293, 257],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [259, 232, 460],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [435, 444, 313],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [347, 507, 370],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [117, 450, 277],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [114, 176, 86],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [50, 178, 485],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [130, 298, 447],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [397, 194, 437],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [90, 410, 185],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [371, 112, 107],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [14, 12, 80],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [481, 169, 215],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [177, 122, 397],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [335, 352, 204],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [284, 13, 311],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [343, 323, 471],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [369, 270, 15],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [361, 88, 244],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [379, 63, 140],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [422, 76, 451],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [376, 174, 307],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [323, 167, 504],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [250, 66, 289],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [223, 253, 436],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [489, 403, 135],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [416, 415, 305],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [12, 94, 445],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [377, 114, 65],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [402, 340, 392],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [9, 51, 27],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [157, 288, 189],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [50, 0, 462],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [209, 506, 66],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [189, 120, 193],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [4, 25, 0],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [393, 410, 271],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [325, 136, 59],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [91, 492, 409],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [243, 116, 382],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [204, 166, 285],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [251, 455, 320],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [407, 451, 361],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [215, 349, 121],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [202, 282, 166],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [435, 15, 74],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [178, 74, 287],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [496, 124, 132],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [272, 119, 310],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [41, 471, 373],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [424, 511, 204],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [190, 2, 153],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [257, 367, 167],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [206, 22, 155],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [72, 438, 172],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [115, 407, 92],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [173, 320, 219],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [465, 179, 20],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [226, 406, 476],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [46, 507, 327],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [378, 288, 254],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [368, 215, 63],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [54, 113, 251],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [147, 375, 324],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [44, 332, 360],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [279, 142, 162],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [155, 113, 27],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [39, 223, 352],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [429, 297, 397],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [103, 288, 120],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [216, 35, 303],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [273, 268, 282],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [420, 421, 269],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [173, 129, 391],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [232, 433, 22],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [290, 380, 446],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [498, 509, 372],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [203, 83, 18],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [325, 271, 378],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [499, 398, 0],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [197, 107, 93],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [85, 168, 505],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [104, 235, 65],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [57, 24, 362],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [350, 106, 129],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [56, 201, 51],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [376, 248, 119],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [359, 333, 140],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [114, 92, 132],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [334, 224, 444],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [167, 201, 90],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [201, 298, 241],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [506, 409, 454],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [327, 484, 181],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [274, 500, 230],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [448, 357, 13],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [127, 144, 426],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [16, 202, 275],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [366, 243, 314],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [457, 305, 376],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [266, 381, 97],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [493, 485, 176],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [122, 132, 297],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [412, 60, 111],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [340, 91, 325],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [4, 249, 57],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [52, 457, 371],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [437, 343, 220],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [493, 316, 274],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [494, 93, 441],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [398, 172, 497],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [322, 345, 241],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [152, 257, 169],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [218, 458, 308],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [153, 314, 381],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [386, 64, 319],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [400, 131, 259],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [262, 202, 9],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [234, 427, 65],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [20, 132, 188],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [6, 50, 136],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [72, 50, 35],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [432, 74, 497],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [336, 457, 389],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [125, 221, 424],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [137, 332, 434],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [443, 389, 490],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [123, 320, 343],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [405, 225, 146],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [250, 264, 342],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [128, 486, 435],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [36, 92, 252],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [111, 33, 32],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [365, 323, 288],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [16, 470, 424],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [265, 144, 336],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [2, 190, 109],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [378, 499, 54],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [384, 152, 431],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [255, 194, 65],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [237, 135, 483],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [94, 121, 400],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [370, 352, 161],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [22, 482, 457],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [35, 93, 405],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [146, 494, 204],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [76, 311, 390],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [224, 54, 461],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [495, 162, 76],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [200, 495, 93],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [294, 101, 36],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [234, 40, 400],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [312, 202, 358],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [76, 221, 387],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [463, 168, 390],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [501, 439, 104],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [255, 346, 81],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [308, 19, 320],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [406, 235, 30],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [328, 276, 58],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [26, 339, 66],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [197, 34, 488],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [290, 132, 500],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [95, 109, 309],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [389, 238, 8],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [298, 419, 173],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [218, 137, 185],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [430, 356, 438],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [326, 204, 228],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [229, 452, 455],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [19, 201, 173],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [22, 346, 106],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [395, 278, 42],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [223, 46, 85],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [97, 234, 403],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [283, 204, 175],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [222, 270, 184],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [121, 68, 38],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [444, 493, 221],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [242, 173, 446],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [376, 205, 29],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [497, 48, 195],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [312, 82, 94],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [207, 255, 332],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [25, 79, 343],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [386, 59, 29],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [222, 22, 261],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [231, 377, 341],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [97, 293, 222],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [405, 413, 164],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [476, 119, 121],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [43, 491, 502],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [37, 100, 312],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [420, 372, 371],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [420, 34, 456],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [370, 43, 118],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [82, 155, 332],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [5, 363, 33],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [273, 365, 422],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [429, 224, 48],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [20, 421, 365],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [59, 167, 497],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [396, 450, 198],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [408, 346, 484],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [52, 101, 374],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [216, 115, 160],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [460, 84, 481],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [256, 413, 204],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [5, 313, 22],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [108, 392, 198],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [283, 152, 155],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [400, 511, 422],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [25, 390, 111],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [84, 344, 442],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [261, 38, 315],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [107, 10, 100],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [227, 392, 168],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [412, 487, 334],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [492, 43, 356],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [228, 85, 500],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [193, 213, 131],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [248, 390, 154],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [368, 211, 333],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [325, 30, 431],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [23, 114, 232],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [223, 445, 413],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [108, 482, 267],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [179, 410, 321],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [95, 437, 498],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [511, 32, 356],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [501, 437, 165],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [192, 324, 447],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [223, 402, 73],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [286, 491, 204],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [404, 394, 249],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [73, 9, 496],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [368, 67, 259],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [501, 249, 5],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [242, 170, 500],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [103, 156, 269],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [204, 176, 81],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [225, 461, 88],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [8, 242, 77],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [144, 187, 447],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [246, 496, 333],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [25, 140, 464],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [353, 508, 225],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [169, 376, 437],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [185, 226, 448],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [132, 297, 242],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [185, 364, 0],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [494, 24, 410],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [450, 190, 68],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [401, 92, 46],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [278, 65, 337],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [80, 312, 481],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [268, 97, 246],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [244, 122, 335],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [378, 426, 35],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [73, 257, 138],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [291, 343, 319],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [43, 229, 298],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [283, 95, 5],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [3, 296, 97],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [157, 352, 414],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [204, 413, 213],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [183, 382, 13],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [173, 176, 91],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [348, 296, 312],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [94, 424, 472],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [104, 367, 509],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [132, 236, 28],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [489, 279, 344],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [126, 319, 482],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [130, 118, 195],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [341, 450, 349],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [93, 373, 315],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [487, 474, 113],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [136, 94, 99],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [404, 277, 505],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [59, 14, 481],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [185, 14, 335],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [240, 494, 288],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [270, 92, 419],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [83, 502, 338],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [192, 101, 429],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [321, 291, 16],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [402, 106, 499],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [309, 365, 91],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [283, 229, 202],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [353, 247, 256],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [65, 228, 508],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [264, 442, 427],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [43, 244, 296],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [283, 281, 286],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [273, 462, 184],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [486, 496, 45],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [151, 131, 287],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [324, 121, 305],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [421, 290, 333],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [129, 240, 251],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [441, 20, 42],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [146, 351, 340],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [467, 69, 57],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [483, 422, 174],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [291, 331, 19],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [143, 232, 372],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [501, 390, 200],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [32, 416, 138],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [209, 456, 443],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [76, 400, 168],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [287, 176, 268],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [362, 302, 374],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [213, 365, 369],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [419, 78, 278],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [403, 47, 446],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [126, 402, 281],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [224, 102, 197],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [230, 320, 426],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [375, 438, 81],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [31, 446, 25],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [139, 484, 441],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [495, 389, 99],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [185, 257, 154],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [429, 420, 412],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [185, 102, 418],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [444, 229, 122],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [315, 166, 425],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [290, 111, 258],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [450, 332, 7],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [190, 35, 480],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [368, 269, 420],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [190, 151, 379],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [309, 262, 145],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [65, 13, 447],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [347, 109, 379],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [466, 382, 325],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [339, 358, 319],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [174, 32, 423],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [111, 357, 143],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [210, 378, 83],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [178, 14, 313],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [98, 373, 206],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [15, 117, 244],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [470, 146, 242],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [181, 369, 367],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [373, 329, 198],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [337, 205, 54],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [509, 153, 192],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [367, 488, 463],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [132, 56, 364],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [396, 510, 497],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [56, 396, 287],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [372, 176, 411],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [60, 102, 104],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [487, 55, 471],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [292, 5, 46],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [135, 500, 320],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [167, 222, 432],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [235, 385, 258],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [326, 362, 456],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [444, 79, 179],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [139, 7, 229],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [306, 184, 190],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [398, 318, 436],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [284, 350, 180],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [490, 184, 318],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [10, 315, 329],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [170, 135, 428],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [101, 271, 207],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [51, 381, 489],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [167, 97, 98],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [187, 118, 244],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [198, 135, 443],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [126, 472, 460],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [15, 295, 389],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [154, 235, 78],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [141, 499, 490],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [60, 259, 326],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [502, 429, 45],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [398, 165, 284],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [447, 218, 160],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [490, 227, 435],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [45, 284, 384],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [265, 446, 479],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [509, 382, 484],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [165, 382, 23],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [76, 508, 278],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [212, 501, 483],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [321, 280, 148],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [305, 502, 30],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [404, 286, 271],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [505, 424, 304],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [293, 502, 296],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [251, 213, 296],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [157, 507, 34],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [391, 352, 274],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [323, 294, 214],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [397, 102, 398],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [60, 234, 332],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [271, 263, 459],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [16, 96, 212],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [204, 375, 452],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [309, 271, 181],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [503, 330, 434],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [260, 128, 180],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [162, 312, 387],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [285, 307, 233],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [441, 357, 397],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [415, 215, 235],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [466, 214, 22],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [459, 77, 452],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [259, 161, 52],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [453, 485, 198],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [42, 349, 50],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [405, 0, 449],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [280, 498, 489],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [312, 295, 277],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [134, 244, 423],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [397, 460, 386],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [508, 484, 90],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [486, 170, 196],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [431, 172, 468],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [495, 196, 14],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [448, 32, 191],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [330, 265, 511],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [199, 332, 242],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [490, 463, 401],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [373, 300, 99],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [479, 455, 470],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [132, 358, 433],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [3, 217, 177],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [442, 200, 277],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [197, 312, 119],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [452, 107, 165],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [481, 350, 242],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [295, 438, 119],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [387, 422, 356],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [243, 359, 369],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [450, 374, 299],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [298, 338, 457],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [415, 448, 316],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [270, 201, 349],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [264, 7, 65],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [273, 361, 60],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [46, 415, 312],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [111, 424, 123],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [409, 156, 58],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [24, 113, 422],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [255, 178, 147],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [207, 444, 13],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [388, 146, 209],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [505, 152, 187],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [242, 228, 232],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [49, 171, 191],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [304, 313, 333],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [368, 170, 82],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [236, 368, 166],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [434, 329, 208],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [144, 452, 186],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [359, 17, 267],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [491, 340, 507],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [230, 343, 67],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [159, 136, 198],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [394, 139, 197],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [266, 197, 136],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [323, 20, 157],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [422, 199, 285],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [257, 56, 103],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [118, 257, 282],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [507, 178, 48],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [345, 209, 323],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [188, 361, 420],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [61, 263, 433],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [95, 223, 148],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [177, 121, 215],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [349, 26, 332],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [507, 502, 225],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [54, 387, 243],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [41, 435, 226],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [351, 134, 44],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [258, 31, 306],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [353, 471, 397],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [494, 22, 112],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [453, 121, 448],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [4, 95, 384],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [291, 121, 199],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [264, 117, 0],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [114, 245, 132],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [281, 58, 80],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [188, 60, 204],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [344, 395, 295],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [214, 199, 493],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [292, 383, 468],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [282, 366, 195],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [99, 129, 272],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [28, 242, 23],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [418, 247, 16],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [225, 230, 429],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [443, 386, 373],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [442, 188, 499],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [234, 214, 349],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [289, 134, 338],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [278, 107, 416],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [290, 217, 63],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [103, 227, 504],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [149, 206, 160],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [29, 52, 465],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [501, 499, 417],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [207, 221, 300],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [217, 17, 21],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [256, 3, 509],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [94, 278, 193],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [305, 472, 129],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [89, 146, 166],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [260, 419, 194],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [120, 164, 250],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [431, 380, 404],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [305, 418, 279],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [89, 381, 356],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [427, 59, 481],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [34, 327, 280],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [339, 425, 501],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [466, 384, 499],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [294, 276, 177],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [131, 195, 234],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [279, 131, 282],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [346, 74, 412],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [119, 4, 144],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [184, 155, 46],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [236, 209, 492],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [144, 92, 374],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [362, 132, 203],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [510, 306, 327],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [387, 139, 490],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [276, 155, 178],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [283, 15, 72],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [100, 184, 456],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [292, 317, 319],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [474, 127, 364],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [465, 74, 131],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [301, 12, 483],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [407, 180, 281],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [79, 333, 162],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [118, 87, 260],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [321, 378, 117],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [302, 141, 194],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [25, 484, 128],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [435, 215, 105],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [476, 426, 12],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [57, 491, 9],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [116, 113, 449],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [169, 81, 9],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [55, 168, 393],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [398, 496, 92],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [25, 418, 77],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [461, 387, 329],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [6, 165, 31],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [208, 142, 179],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [262, 202, 398],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [409, 75, 187],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [425, 86, 237],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [425, 166, 167],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [284, 153, 395],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [107, 37, 453],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [496, 16, 139],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [466, 376, 461],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [80, 44, 71],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [486, 144, 361],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [412, 67, 507],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [440, 334, 418],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [240, 483, 228],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [266, 95, 134],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [155, 500, 412],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [382, 104, 25],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [454, 58, 436],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [88, 195, 373],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [200, 233, 252],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [182, 483, 78],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [226, 15, 59],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [246, 18, 129],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [229, 242, 467],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [233, 92, 387],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [77, 462, 224],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [19, 315, 159],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [107, 296, 9],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [335, 175, 349],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [40, 352, 378],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [256, 404, 362],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [437, 42, 431],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [188, 201, 187],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [88, 424, 125],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [306, 431, 318],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [344, 130, 76],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [181, 377, 393],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [478, 185, 171],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [342, 114, 105],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [283, 59, 22],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [51, 75, 462],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [81, 187, 256],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [458, 152, 92],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [497, 306, 30],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [451, 274, 495],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [139, 16, 307],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [346, 248, 423],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [31, 216, 188],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [130, 306, 243],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [233, 394, 18],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [426, 267, 450],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [85, 103, 419],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [304, 5, 86],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [402, 69, 510],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [463, 233, 193],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [130, 114, 277],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [180, 109, 175],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [461, 60, 375],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [420, 147, 26],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [213, 495, 216],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [373, 270, 148],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [262, 305, 23],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [197, 412, 188],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [159, 80, 49],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [70, 286, 199],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [38, 47, 334],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [334, 436, 244],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [204, 242, 125],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [345, 346, 292],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [199, 498, 375],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [174, 234, 23],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [217, 318, 291],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [46, 380, 3],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [63, 265, 252],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [465, 363, 488],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [327, 215, 98],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [25, 65, 363],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [251, 37, 342],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [388, 48, 204],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [189, 69, 116],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [226, 315, 7],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [106, 365, 108],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [211, 47, 369],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [2, 452, 311],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [177, 431, 142],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [358, 317, 325],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [446, 274, 370],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [507, 154, 511],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [85, 183, 55],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [52, 114, 447],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [42, 12, 6],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [17, 320, 43],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [345, 174, 449],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [66, 324, 60],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [3, 296, 274],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [115, 215, 446],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [216, 5, 407],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [405, 358, 202],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [502, 295, 136],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [105, 318, 426],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [252, 60, 188],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [489, 401, 195],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [213, 482, 235],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [333, 243, 63],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [248, 186, 147],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [89, 263, 301],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [143, 133, 349],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [60, 265, 194],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [238, 416, 41],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [306, 222, 476],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [329, 22, 335],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [0, 255, 139],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [278, 257, 166],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [289, 428, 374],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [114, 380, 473],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [498, 316, 468],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [404, 469, 380],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [368, 502, 235],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [496, 493, 386],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [24, 418, 225],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [217, 261, 3],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [430, 109, 386],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [268, 410, 440],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [387, 316, 156],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [154, 165, 342],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [337, 349, 165],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [317, 39, 193],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [425, 477, 287],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [108, 476, 376],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [299, 203, 19],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [245, 242, 107],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [193, 52, 54],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [205, 430, 20],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [463, 322, 106],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [405, 380, 337],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [458, 168, 491],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [397, 217, 122],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [104, 98, 154],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [275, 217, 64],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [214, 279, 392],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [411, 48, 246],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [112, 413, 111],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [468, 190, 151],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [374, 290, 95],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [83, 136, 349],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [468, 122, 308],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [138, 212, 472],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [466, 106, 135],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [384, 66, 506],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [471, 407, 352],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [79, 489, 450],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [146, 198, 362],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [489, 444, 499],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [386, 312, 21],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [282, 261, 230],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [103, 162, 109],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [306, 25, 76],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [208, 96, 82],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [192, 156, 72],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [31, 47, 382],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [432, 266, 36],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [155, 341, 82],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [225, 63, 110],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [245, 441, 107],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [389, 27, 202],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [365, 433, 104],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [400, 391, 414],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [364, 58, 145],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [232, 335, 78],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [110, 79, 267],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [399, 253, 369],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [270, 50, 350],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [286, 464, 509],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [303, 171, 263],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [328, 80, 229],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [40, 475, 370],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [313, 104, 321],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [366, 381, 204],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [138, 371, 182],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [283, 419, 375],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [162, 191, 393],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [185, 434, 416],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [416, 230, 35],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [51, 472, 354],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [31, 297, 116],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [220, 454, 375],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [245, 354, 282],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [166, 170, 77],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [309, 261, 42],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [166, 209, 299],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [389, 437, 44],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [298, 431, 308],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [200, 504, 227],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [281, 339, 20],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [370, 198, 240],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [29, 490, 128],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [232, 316, 56],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [401, 252, 186],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [298, 59, 18],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [81, 220, 9],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [503, 106, 212],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [39, 168, 158],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [24, 133, 58],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [147, 260, 443],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [47, 215, 481],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [444, 483, 414],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [346, 104, 419],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [373, 186, 255],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [318, 149, 113],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [212, 334, 318],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [507, 370, 490],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [308, 182, 54],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [501, 374, 260],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [129, 101, 271],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [440, 59, 204],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [401, 286, 502],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [351, 419, 170],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [353, 462, 217],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [425, 235, 389],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [71, 457, 385],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [329, 169, 200],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [157, 17, 155],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [443, 239, 377],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [450, 184, 390],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [32, 468, 128],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [19, 420, 266],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [126, 174, 150],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [261, 32, 502],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [389, 82, 511],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [210, 146, 301],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [268, 132, 216],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [321, 172, 455],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [253, 21, 65],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [66, 493, 344],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [249, 346, 493],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [295, 235, 63],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [450, 155, 48],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [253, 87, 38],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [179, 505, 100],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [279, 443, 334],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [510, 271, 275],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [99, 268, 338],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [443, 9, 487],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [48, 340, 309],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [191, 366, 374],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [209, 21, 35],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [256, 158, 7],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [308, 49, 34],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [343, 135, 96],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [502, 442, 479],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [496, 312, 277],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [421, 291, 312],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [270, 185, 44],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [422, 272, 472],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [478, 413, 222],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [210, 82, 281],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [59, 375, 291],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [34, 325, 110],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [484, 81, 161],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [69, 201, 92],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [92, 392, 440],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [12, 204, 155],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [292, 43, 492],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [45, 374, 37],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [186, 41, 107],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [453, 193, 213],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [434, 487, 441],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [269, 339, 490],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [167, 141, 163],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [154, 34, 262],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [356, 28, 392],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [13, 252, 283],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [286, 54, 60],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [395, 496, 504],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [489, 41, 326],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [167, 499, 501],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [119, 335, 306],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [81, 328, 10],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [161, 158, 50],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [157, 46, 332],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [156, 369, 206],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [94, 8, 43],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [339, 10, 12],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [160, 323, 421],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [313, 194, 39],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [195, 438, 20],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [484, 188, 68],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [114, 377, 70],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [429, 178, 310],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [493, 353, 42],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [75, 175, 395],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [229, 201, 262],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [411, 249, 293],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [169, 393, 389],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [283, 47, 92],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [93, 88, 69],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [229, 232, 36],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [280, 109, 408],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [343, 316, 236],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [337, 150, 156],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [217, 108, 191],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [49, 129, 389],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [4, 454, 187],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [108, 407, 420],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [129, 394, 31],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [63, 187, 231],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [45, 495, 390],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [224, 246, 88],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [276, 483, 463],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [337, 51, 85],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [225, 22, 117],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [397, 443, 67],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [495, 343, 510],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [92, 365, 178],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [325, 265, 450],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [276, 74, 264],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [20, 316, 203],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [254, 159, 120],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [279, 22, 117],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [296, 122, 121],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [450, 142, 322],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [199, 185, 206],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [235, 423, 217],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [228, 128, 76],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [112, 109, 209],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [350, 142, 29],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [429, 218, 6],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [465, 347, 348],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [192, 88, 33],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [492, 4, 317],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [101, 458, 71],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [77, 448, 507],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [391, 465, 280],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [140, 266, 407],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [97, 220, 485],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [386, 376, 273],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [462, 222, 113],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [94, 347, 132],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [348, 100, 39],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [170, 279, 309],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [227, 313, 73],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [420, 356, 83],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [306, 480, 268],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [243, 188, 234],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [186, 299, 153],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [490, 281, 274],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [498, 314, 116],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [228, 285, 192],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [259, 220, 53],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [469, 264, 477],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [98, 285, 107],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [103, 371, 470],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [6, 107, 280],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [306, 320, 287],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [487, 20, 270],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [471, 394, 406],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [103, 44, 493],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [172, 130, 304],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [378, 175, 339],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [239, 440, 404],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [61, 99, 121],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [63, 39, 292],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [426, 435, 123],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [240, 468, 285],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [87, 171, 387],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [304, 489, 339],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [273, 391, 265],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [278, 309, 421],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [126, 213, 367],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [488, 481, 180],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [252, 273, 487],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [435, 389, 211],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [158, 103, 154],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [3, 170, 214],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [251, 173, 32],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [312, 144, 106],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [469, 113, 10],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [100, 149, 492],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [244, 334, 77],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [134, 293, 225],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [301, 356, 411],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [136, 161, 170],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [370, 65, 178],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [356, 98, 203],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [373, 417, 66],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [482, 15, 285],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [51, 265, 153],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [324, 510, 216],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [117, 338, 299],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [332, 292, 221],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [176, 429, 408],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [346, 364, 10],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [138, 71, 340],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [212, 459, 134],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [377, 83, 261],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [508, 43, 96],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [38, 319, 12],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [73, 347, 339],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [62, 110, 9],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [111, 479, 292],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [492, 281, 87],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [378, 501, 365],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [496, 89, 481],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [317, 20, 388],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [252, 185, 124],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [289, 270, 60],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [439, 304, 85],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [213, 235, 39],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [59, 276, 82],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [140, 181, 175],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [458, 430, 150],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [267, 263, 287],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [381, 401, 390],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [339, 483, 226],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [445, 474, 254],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [340, 428, 317],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [307, 75, 223],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [51, 35, 257],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [428, 453, 309],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [389, 329, 332],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [463, 224, 480],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [403, 126, 412],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [426, 20, 17],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [431, 137, 220],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [335, 99, 365],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [228, 422, 29],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [196, 212, 410],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [362, 442, 421],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [393, 112, 305],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [140, 466, 107],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [506, 331, 41],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [339, 35, 415],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [241, 72, 270],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [463, 78, 478],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [421, 161, 195],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [478, 401, 459],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [291, 309, 322],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [397, 201, 319],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [503, 320, 497],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [315, 278, 498],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [153, 500, 57],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [27, 415, 437],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [105, 422, 177],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [354, 90, 229],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [396, 330, 107],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [50, 94, 124],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [170, 59, 369],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [174, 453, 360],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [90, 511, 389],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [351, 139, 280],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [159, 146, 260],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [159, 248, 400],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [371, 179, 317],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [478, 91, 464],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [321, 189, 415],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [174, 119, 243],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [56, 207, 174],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [192, 414, 93],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [136, 226, 205],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [56, 174, 159],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [295, 252, 212],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [202, 189, 428],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [105, 292, 60],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [453, 497, 1],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [481, 361, 276],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [240, 219, 483],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [151, 381, 253],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [146, 111, 354],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [16, 248, 233],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [55, 423, 82],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [315, 293, 506],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [384, 174, 166],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [156, 344, 335],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [21, 241, 88],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [141, 150, 460],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [420, 211, 487],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [498, 412, 126],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [268, 411, 233],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [458, 155, 301],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [1, 179, 481],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [377, 200, 474],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [432, 245, 312],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [13, 153, 414],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [320, 199, 225],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [144, 153, 417],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [334, 435, 287],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [419, 209, 508],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [203, 234, 164],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [428, 8, 123],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [265, 326, 119],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [84, 206, 98],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [276, 274, 478],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [119, 421, 88],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [246, 406, 87],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [158, 209, 487],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [478, 33, 294],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [75, 167, 121],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [41, 368, 47],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [58, 85, 453],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [81, 167, 392],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [36, 416, 222],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [331, 59, 345],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [21, 506, 338],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [347, 62, 44],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [493, 263, 129],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [485, 268, 4],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [265, 34, 98],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [435, 158, 379],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [88, 197, 118],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [494, 97, 115],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [97, 355, 416],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [9, 412, 293],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [142, 118, 164],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [6, 339, 242],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [50, 396, 363],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [395, 170, 444],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [427, 484, 146],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [289, 130, 301],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [25, 429, 212],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [462, 400, 205],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [65, 252, 291],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [58, 217, 170],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [175, 193, 395],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [120, 50, 170],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [473, 379, 70],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [405, 214, 228],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [397, 144, 127],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [500, 242, 287],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [8, 286, 475],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [49, 289, 92],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [426, 45, 7],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [497, 259, 201],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [87, 446, 44],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [339, 74, 264],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [38, 418, 248],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [339, 441, 186],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [20, 249, 65],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [410, 111, 407],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [473, 345, 434],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [348, 358, 411],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [152, 9, 452],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [282, 258, 34],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [376, 80, 38],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [49, 150, 242],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [417, 128, 491],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [128, 473, 107],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [306, 403, 479],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [363, 186, 511],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [16, 422, 511],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [426, 128, 414],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [274, 91, 46],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [484, 229, 448],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [331, 364, 455],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [192, 460, 23],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [263, 161, 103],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [437, 26, 196],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [73, 266, 252],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [436, 340, 402],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [22, 324, 83],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [291, 102, 145],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [124, 389, 221],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [482, 460, 181],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [48, 326, 30],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [321, 125, 477],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [354, 90, 333],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [260, 421, 90],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [252, 493, 380],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [326, 193, 318],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [292, 62, 216],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [204, 390, 238],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [52, 252, 24],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [299, 28, 99],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [424, 419, 112],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [292, 109, 401],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [236, 118, 189],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [86, 427, 221],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [417, 34, 437],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [195, 490, 119],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [105, 136, 411],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [137, 62, 447],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [290, 376, 282],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [451, 34, 82],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [266, 151, 235],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [31, 100, 259],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [393, 411, 472],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [75, 470, 3],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [326, 440, 421],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [44, 409, 256],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [297, 23, 57],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [159, 254, 209],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [182, 307, 74],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [34, 277, 281],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [135, 437, 288],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [113, 366, 213],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [323, 121, 510],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [241, 401, 88],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [338, 68, 249],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [272, 153, 227],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [370, 60, 38],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [317, 84, 178],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [174, 348, 231],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [252, 179, 400],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [392, 169, 197],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [473, 477, 433],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [280, 449, 90],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [38, 110, 68],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [207, 43, 39],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [222, 106, 269],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [19, 238, 217],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [24, 473, 142],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [115, 420, 148],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [132, 168, 331],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [443, 467, 360],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [26, 208, 34],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [126, 262, 354],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [336, 379, 314],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [200, 492, 488],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [92, 115, 43],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [371, 296, 34],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [53, 322, 29],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [406, 345, 10],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [388, 308, 335],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [74, 257, 509],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [499, 463, 107],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [117, 360, 132],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [329, 294, 366],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [389, 248, 293],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [307, 456, 406],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [429, 490, 126],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [319, 133, 393],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [165, 133, 388],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [9, 406, 298],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [224, 393, 193],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [279, 225, 224],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [237, 2, 109],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [382, 280, 87],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [414, 360, 33],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [156, 14, 212],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [87, 226, 470],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [458, 268, 15],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [286, 463, 435],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [118, 232, 110],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [172, 413, 349],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [203, 30, 327],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [495, 361, 435],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [283, 314, 330],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [374, 216, 62],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [410, 490, 429],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [293, 125, 68],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [138, 111, 167],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [239, 120, 382],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [265, 268, 44],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [245, 318, 439],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [453, 150, 348],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [52, 68, 288],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [457, 325, 398],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [259, 27, 270],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [397, 52, 446],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [256, 259, 493],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [298, 505, 17],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [333, 118, 169],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [455, 260, 481],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [458, 384, 180],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [235, 251, 313],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [230, 149, 249],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [221, 40, 18],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [297, 211, 347],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [168, 307, 130],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [86, 404, 88],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [146, 6, 425],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [20, 76, 358],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [75, 118, 322],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [227, 496, 164],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [463, 493, 101],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [59, 331, 360],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [327, 378, 151],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [443, 313, 242],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [430, 188, 423],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [440, 135, 351],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [201, 37, 170],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [283, 414, 217],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [378, 411, 476],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [172, 238, 236],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [214, 47, 209],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [465, 120, 70],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [428, 166, 390],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [268, 199, 438],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [59, 389, 450],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [163, 501, 248],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [58, 122, 363],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [483, 396, 434],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [0, 411, 445],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [271, 463, 490],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [68, 329, 278],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [360, 277, 318],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [375, 394, 413],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [145, 225, 349],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [365, 494, 352],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [406, 435, 489],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [442, 273, 413],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [439, 126, 191],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [280, 165, 454],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [105, 266, 2],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [93, 416, 82],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [314, 326, 434],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [353, 132, 346],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [84, 280, 431],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [221, 175, 407],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [371, 263, 31],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [445, 463, 81],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [107, 478, 236],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [23, 328, 348],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [456, 123, 302],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [143, 456, 396],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [373, 458, 367],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [95, 343, 23],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [234, 210, 371],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [9, 440, 75],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [414, 42, 49],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [36, 437, 88],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [288, 103, 478],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [22, 348, 332],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [115, 409, 4],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [465, 139, 285],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [152, 33, 158],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [17, 338, 387],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [102, 282, 440],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [249, 156, 235],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [133, 498, 329],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [333, 149, 10],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [360, 463, 335],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [350, 167, 311],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [41, 202, 263],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [191, 178, 414],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [308, 5, 28],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [325, 496, 95],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [407, 17, 410],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [94, 439, 318],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [54, 251, 110],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [307, 208, 98],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [341, 386, 106],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [244, 494, 261],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [342, 114, 0],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [503, 403, 482],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [258, 179, 314],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [87, 327, 128],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [386, 271, 2],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [270, 464, 502],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [77, 114, 404],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [227, 428, 413],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [282, 411, 370],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [23, 136, 308],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [169, 338, 405],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [161, 359, 286],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [43, 427, 293],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [64, 190, 342],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [161, 300, 169],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [469, 139, 395],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [334, 63, 443],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [401, 467, 468],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [39, 425, 80],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [237, 334, 414],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [224, 268, 365],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [304, 354, 69],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [19, 253, 483],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [35, 419, 319],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [222, 16, 451],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [443, 426, 222],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [457, 365, 132],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [225, 199, 419],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [120, 440, 288],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [151, 116, 35],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [157, 217, 46],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [123, 406, 62],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [3, 454, 333],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [64, 450, 183],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [145, 64, 58],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [343, 410, 94],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [207, 8, 136],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [112, 133, 2],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [66, 292, 457],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [95, 211, 396],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [509, 431, 220],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [132, 14, 505],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [142, 337, 418],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [369, 490, 355],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [201, 4, 193],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [180, 482, 43],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [304, 233, 297],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [23, 299, 219],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [339, 366, 267],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [0, 233, 30],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [164, 470, 429],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [25, 354, 126],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [153, 270, 127],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [432, 325, 436],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [243, 17, 462],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [95, 423, 12],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [312, 185, 493],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [483, 418, 345],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [349, 212, 85],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [104, 14, 151],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [492, 285, 372],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [154, 496, 188],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [76, 56, 497],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [217, 231, 230],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [439, 387, 412],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [426, 374, 393],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [95, 130, 4],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [461, 179, 58],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [46, 439, 511],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [27, 300, 451],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [266, 295, 167],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [46, 376, 274],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [250, 34, 14],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [47, 402, 366],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [366, 367, 387],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [350, 155, 502],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [215, 20, 104],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [237, 337, 87],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [357, 30, 124],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [443, 228, 456],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [454, 366, 208],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [81, 222, 335],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [244, 226, 166],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [401, 317, 327],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [253, 439, 451],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [481, 479, 6],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [204, 128, 222],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [425, 29, 109],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [488, 50, 427],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [206, 479, 95],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [447, 408, 232],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [200, 357, 502],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [349, 486, 96],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [471, 216, 120],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [215, 467, 163],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [336, 173, 222],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [122, 312, 391],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [103, 442, 250],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [357, 204, 385],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [448, 85, 451],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [27, 153, 222],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [104, 404, 3],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [292, 168, 126],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [90, 60, 257],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [360, 278, 476],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [332, 3, 116],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [259, 390, 137],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [385, 151, 203],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [66, 179, 282],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [281, 120, 105],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [244, 224, 390],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [145, 307, 287],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [366, 115, 154],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [402, 454, 156],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [426, 294, 372],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [432, 48, 412],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [188, 380, 460],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [328, 126, 461],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [61, 352, 251],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [346, 354, 170],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [376, 50, 268],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [64, 44, 78],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [172, 510, 463],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [74, 457, 223],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [411, 171, 251],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [17, 34, 45],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [193, 327, 129],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [44, 436, 199],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [297, 90, 416],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [137, 370, 8],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [208, 286, 278],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [265, 385, 171],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [474, 80, 307],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [326, 56, 172],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [437, 55, 180],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [429, 147, 474],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [33, 72, 401],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [467, 387, 196],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [124, 459, 352],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [456, 499, 354],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [10, 202, 239],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [343, 348, 422],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [425, 90, 436],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [393, 484, 373],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [124, 224, 30],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [356, 122, 479],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [62, 210, 106],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [187, 174, 215],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [196, 115, 107],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [160, 262, 8],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [208, 76, 186],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [103, 195, 308],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [24, 400, 389],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [305, 487, 502],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [333, 511, 212],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [467, 123, 177],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [442, 195, 449],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [219, 92, 86],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [233, 256, 232],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [389, 197, 427],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [401, 448, 112],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [241, 375, 154],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [297, 48, 66],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [249, 309, 388],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [66, 123, 397],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [186, 375, 396],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [176, 25, 321],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [125, 208, 238],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [238, 101, 140],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [150, 120, 199],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [316, 146, 320],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [388, 186, 67],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [182, 501, 227],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [196, 445, 436],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [436, 295, 170],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [443, 287, 35],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [41, 341, 308],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [354, 18, 449],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [259, 11, 200],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [103, 304, 366],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [57, 50, 312],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [274, 234, 268],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [274, 92, 70],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [433, 340, 5],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [294, 212, 197],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [208, 449, 305],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [496, 229, 250],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [62, 478, 253],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [6, 185, 247],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [135, 258, 267],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [129, 312, 508],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [459, 69, 19],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [275, 19, 113],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [18, 116, 102],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [119, 76, 390],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [54, 219, 385],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [182, 343, 445],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [317, 25, 43],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [254, 430, 289],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [414, 476, 446],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [77, 173, 22],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [330, 439, 228],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [300, 351, 122],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [328, 206, 209],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [197, 451, 477],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [360, 471, 305],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [383, 178, 349],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [423, 282, 432],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [454, 169, 214],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [397, 393, 152],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [118, 479, 308],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [78, 412, 460],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [449, 2, 289],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [59, 14, 446],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [164, 458, 95],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [113, 32, 275],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [11, 288, 115],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [288, 129, 370],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [453, 511, 85],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [357, 318, 65],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [141, 486, 11],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [106, 121, 503],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [199, 58, 449],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [41, 375, 477],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [202, 348, 485],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [361, 170, 266],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [58, 469, 185],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [35, 7, 110],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [451, 426, 89],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [136, 221, 276],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [499, 384, 381],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [291, 441, 382],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [261, 416, 381],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [467, 31, 37],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [428, 249, 65],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [314, 143, 22],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [207, 144, 25],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [266, 100, 382],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [10, 468, 176],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [26, 74, 266],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [334, 340, 269],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [121, 33, 305],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [332, 442, 443],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [20, 344, 238],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [46, 48, 367],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [150, 382, 353],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [269, 81, 47],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [132, 119, 61],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [170, 391, 320],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [50, 353, 415],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [355, 77, 453],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [466, 129, 315],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [180, 385, 505],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [265, 289, 492],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [402, 88, 227],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [105, 476, 322],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [330, 303, 152],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [242, 151, 475],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [108, 102, 315],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [213, 491, 243],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [162, 72, 406],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [392, 10, 360],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [180, 185, 169],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [36, 499, 109],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [264, 38, 450],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [306, 269, 475],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [292, 168, 507],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [204, 293, 24],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [78, 162, 63],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [218, 492, 356],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [214, 274, 440],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [16, 270, 394],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [450, 362, 18],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [223, 164, 423],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [82, 195, 182],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [489, 464, 66],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [144, 122, 87],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [162, 314, 95],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [371, 19, 307],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [154, 339, 508],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [305, 51, 207],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [140, 229, 449],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [346, 455, 509],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [245, 166, 118],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [125, 485, 308],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [216, 353, 123],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [19, 345, 228],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [38, 225, 134],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [469, 389, 502],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [143, 426, 361],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [442, 473, 276],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [53, 333, 233],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [59, 263, 350],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [223, 152, 235],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [434, 416, 110],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [234, 100, 413],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [361, 446, 231],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [352, 11, 433],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [305, 177, 216],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [479, 180, 309],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [213, 35, 474],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [199, 14, 238],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [422, 365, 212],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [238, 460, 464],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [373, 222, 409],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [198, 104, 350],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [281, 339, 21],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [310, 477, 490],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [478, 504, 201],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [119, 395, 381],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [130, 161, 172],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [112, 452, 62],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [37, 93, 256],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [491, 134, 412],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [431, 259, 45],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [415, 405, 370],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [291, 170, 210],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [130, 351, 297],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [453, 156, 229],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [463, 395, 77],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [278, 162, 407],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [180, 435, 203],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [75, 404, 228],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [119, 43, 395],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [392, 125, 185],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [177, 7, 507],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [505, 135, 215],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [69, 159, 396],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [9, 81, 210],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [52, 482, 336],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [497, 312, 160],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [359, 64, 379],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [18, 137, 352],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [313, 469, 236],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [26, 24, 100],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [420, 259, 381],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [34, 478, 330],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [443, 140, 244],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [208, 83, 91],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [201, 120, 390],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [214, 412, 422],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [334, 272, 423],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [107, 219, 357],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [234, 150, 343],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [171, 176, 44],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [395, 449, 345],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [169, 457, 92],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [473, 385, 11],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [155, 62, 237],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [148, 397, 431],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [501, 72, 199],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [248, 129, 342],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [191, 85, 37],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [160, 200, 330],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [352, 362, 393],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [415, 283, 8],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [13, 311, 200],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [64, 352, 113],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [218, 333, 411],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [43, 356, 485],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [83, 127, 119],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [439, 472, 93],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [485, 394, 182],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [218, 89, 395],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [264, 93, 480],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [50, 256, 20],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [398, 381, 42],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [153, 57, 319],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [170, 29, 456],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [449, 90, 42],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [118, 184, 459],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [343, 366, 67],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [7, 50, 203],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [237, 343, 378],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [210, 11, 283],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [102, 495, 258],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [203, 273, 349],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [450, 16, 203],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [103, 453, 352],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [246, 402, 272],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [374, 240, 213],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [346, 479, 55],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [335, 138, 290],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [172, 261, 292],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [346, 181, 327],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [335, 250, 311],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [246, 189, 61],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [125, 507, 267],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [93, 407, 10],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [112, 497, 339],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [120, 289, 310],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [316, 79, 311],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [82, 120, 233],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [293, 471, 493],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [376, 94, 341],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [13, 420, 80],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [509, 450, 495],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [129, 200, 161],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [153, 366, 383],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [306, 380, 464],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [394, 245, 340],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [465, 94, 373],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [216, 230, 418],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [115, 226, 256],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [252, 468, 421],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [336, 389, 171],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [193, 47, 390],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [379, 310, 60],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [196, 431, 477],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [7, 292, 234],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [124, 269, 165],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [30, 19, 510],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [251, 411, 358],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [404, 244, 395],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [346, 462, 145],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [125, 182, 264],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [23, 158, 458],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [128, 467, 143],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [272, 69, 159],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [365, 2, 338],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [245, 77, 461],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [82, 147, 69],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [299, 381, 344],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [453, 492, 215],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [299, 377, 495],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [423, 304, 205],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [19, 442, 396],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [428, 237, 347],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [68, 280, 165],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [433, 180, 66],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [43, 496, 359],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [60, 195, 327],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [85, 319, 362],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [432, 361, 135],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [112, 300, 57],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [284, 470, 403],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [245, 340, 165],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [128, 430, 218],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [463, 249, 4],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [415, 350, 11],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [62, 243, 77],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [100, 101, 496],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [87, 12, 185],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [436, 71, 194],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [301, 160, 474],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [432, 270, 426],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [396, 214, 81],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [295, 48, 288],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [172, 505, 417],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [2, 390, 357],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [366, 459, 436],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [375, 184, 329],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [69, 79, 488],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [322, 389, 40],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [504, 358, 168],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [132, 183, 472],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [120, 342, 230],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [279, 51, 286],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [492, 97, 341],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [108, 371, 504],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [396, 217, 180],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [432, 468, 199],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [113, 136, 211],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [60, 427, 142],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [395, 309, 508],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [111, 226, 252],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [120, 144, 397],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [238, 147, 113],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [206, 391, 30],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [273, 310, 249],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [377, 460, 233],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [297, 44, 415],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [300, 343, 492],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [413, 38, 125],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [140, 267, 61],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [344, 298, 228],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [164, 52, 268],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [441, 463, 332],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [467, 425, 428],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [476, 212, 248],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [287, 401, 154],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [251, 40, 311],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [494, 342, 287],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [80, 128, 505],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [106, 301, 379],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [241, 451, 156],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [446, 488, 128],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [510, 25, 24],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [33, 337, 126],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [77, 282, 30],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [260, 311, 483],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [257, 185, 268],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [17, 91, 494],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [132, 332, 327],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [35, 5, 154],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [302, 446, 23],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [147, 263, 241],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [121, 50, 476],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [129, 61, 336],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [125, 419, 158],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [42, 393, 10],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [21, 0, 510],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [485, 305, 274],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [257, 453, 283],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [433, 431, 336],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [308, 315, 128],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [209, 409, 25],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [315, 344, 111],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [76, 188, 22],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [415, 483, 47],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [338, 326, 299],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [13, 116, 141],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [229, 363, 5],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [471, 323, 237],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [243, 260, 221],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [166, 423, 174],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [149, 457, 315],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [48, 363, 490],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [112, 355, 420],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [380, 82, 506],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [26, 413, 302],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [386, 498, 221],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [372, 152, 224],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [210, 78, 234],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [277, 436, 489],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [444, 228, 179],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [266, 185, 490],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [224, 220, 440],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [380, 104, 452],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [9, 61, 469],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [17, 2, 368],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [312, 149, 418],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [456, 175, 49],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [56, 356, 433],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [40, 210, 325],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [152, 68, 359],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [120, 424, 266],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [93, 454, 72],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [158, 33, 21],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [372, 16, 489],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [462, 354, 5],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [195, 162, 293],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [345, 127, 275],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [358, 262, 468],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [201, 285, 283],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [408, 177, 275],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [65, 410, 486],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [261, 29, 300],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [104, 16, 246],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [352, 382, 330],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [259, 484, 298],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [351, 390, 231],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [39, 150, 355],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [429, 315, 50],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [31, 32, 360],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [248, 98, 417],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [412, 498, 112],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [129, 369, 40],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [30, 135, 89],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [456, 17, 455],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [290, 209, 150],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [42, 140, 74],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [365, 273, 102],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [260, 226, 462],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [431, 108, 419],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [133, 367, 115],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [245, 471, 408],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [447, 32, 8],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [106, 271, 358],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [285, 224, 200],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [326, 486, 274],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [77, 333, 38],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [18, 411, 4],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [161, 211, 467],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [309, 59, 151],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [271, 51, 474],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [136, 270, 337],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [336, 252, 417],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [190, 376, 389],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [462, 87, 386],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [178, 342, 40],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [297, 166, 192],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [97, 214, 460],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [292, 352, 385],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [18, 362, 333],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [295, 95, 335],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [453, 290, 143],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [210, 199, 44],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [506, 89, 416],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [217, 69, 476],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [117, 59, 184],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [253, 276, 287],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [84, 275, 150],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [464, 212, 255],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [387, 232, 504],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [141, 359, 273],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [192, 492, 60],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [374, 156, 113],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [177, 362, 221],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [233, 385, 506],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [320, 500, 316],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [479, 293, 271],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [440, 409, 91],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [474, 328, 80],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [97, 188, 159],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [300, 141, 61],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [197, 204, 190],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [371, 207, 375],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [306, 448, 160],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [299, 385, 63],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [200, 59, 316],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [282, 330, 93],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [363, 109, 449],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [139, 83, 27],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [443, 407, 81],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [114, 310, 508],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [83, 291, 13],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [98, 167, 360],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [264, 294, 210],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [323, 350, 469],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [396, 46, 444],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [481, 217, 354],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [276, 95, 254],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [388, 61, 340],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [114, 511, 379],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [224, 383, 74],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [403, 207, 374],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [26, 163, 178],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [162, 236, 188],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [93, 58, 395],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [441, 371, 374],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [389, 377, 182],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [189, 271, 411],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [265, 479, 222],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [172, 309, 234],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [125, 237, 137],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [322, 167, 21],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [177, 443, 35],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [95, 353, 351],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [335, 337, 398],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [6, 314, 381],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [260, 379, 424],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [395, 450, 191],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [353, 312, 397],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [223, 280, 62],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [310, 120, 107],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [65, 369, 489],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [70, 384, 166],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [222, 247, 446],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [279, 409, 175],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [294, 245, 309],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [388, 56, 112],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [412, 79, 371],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [500, 485, 305],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [461, 370, 366],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [272, 464, 330],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [210, 465, 93],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [174, 411, 502],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [510, 32, 300],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [154, 85, 358],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [354, 180, 35],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [5, 205, 69],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [174, 200, 407],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [438, 204, 116],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [322, 26, 274],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [492, 478, 273],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [193, 440, 180],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [107, 495, 144],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [451, 138, 384],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [240, 344, 298],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [422, 6, 337],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [250, 444, 449],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [74, 197, 245],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [75, 132, 315],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [53, 261, 313],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [56, 224, 166],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [260, 126, 67],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [8, 242, 44],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [166, 315, 116],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [18, 296, 135],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [95, 107, 281],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [132, 506, 386],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [179, 182, 82],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [432, 448, 218],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [107, 511, 0],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [468, 317, 337],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [493, 337, 375],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [165, 199, 24],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [277, 21, 472],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [275, 147, 128],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [232, 42, 82],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [197, 463, 502],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [92, 167, 389],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [107, 181, 393],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [228, 35, 361],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [83, 302, 499],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [315, 426, 279],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [45, 420, 122],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [178, 159, 320],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [293, 82, 105],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [85, 226, 107],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [440, 59, 230],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [327, 220, 389],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [430, 110, 184],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [237, 301, 188],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [105, 451, 155],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [230, 381, 309],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [473, 224, 45],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [403, 415, 142],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [397, 167, 197],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [127, 30, 350],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [344, 210, 421],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [400, 393, 464],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [228, 382, 274],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [435, 381, 237],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [46, 50, 112],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [356, 213, 309],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [325, 370, 381],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [72, 69, 138],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [183, 156, 306],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [342, 483, 98],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [245, 148, 254],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [420, 36, 346],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [481, 296, 233],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [280, 390, 347],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [511, 373, 175],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [13, 137, 166],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [278, 347, 45],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [336, 440, 163],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [428, 463, 225],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [200, 43, 62],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [195, 71, 181],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [239, 404, 99],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [417, 77, 203],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [319, 467, 67],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [377, 195, 86],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [390, 320, 262],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [446, 291, 417],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [247, 214, 225],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [349, 41, 479],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [497, 261, 271],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [10, 474, 131],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [126, 354, 264],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [153, 221, 475],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [242, 274, 142],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [150, 20, 384],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [139, 462, 137],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [13, 155, 213],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [365, 345, 414],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [226, 214, 217],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [288, 485, 218],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [467, 331, 145],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [96, 136, 203],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [316, 418, 334],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [124, 272, 130],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [51, 457, 211],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [182, 40, 58],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [149, 330, 61],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [431, 411, 279],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [251, 455, 293],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [484, 165, 224],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [61, 21, 356],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [72, 257, 165],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [1, 217, 135],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [228, 186, 349],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [462, 108, 165],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [232, 480, 504],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [63, 295, 381],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [65, 305, 469],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [435, 243, 212],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [25, 289, 126],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [499, 318, 11],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [156, 232, 67],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [457, 356, 245],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [88, 140, 36],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [20, 83, 100],
+      "signs": [1, 1, 1]
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "schema_version": "epix.problem.v1",
+  "instance_id": "3hypergraph_xorsat128_instance14",
+  "group": "3hypergraph_xorsat128",
+  "original_instance_id": "xor_128_13",
+  "original_cohort_key": "xor_128_13",
+  "source_family": "xor",
+  "problem_type": "3xorsat",
+  "n_variables": 128,
+  "node_index_base": 0,
+  "variable_domain": [0, 1],
+  "objective": {
+    "name": "violated_xor_constraints",
+    "sense": "minimize",
+    "target": 0,
+    "formula": "count of constraints whose variable XOR differs from the required parity",
+    "reference_energy": "violated parity count"
+  },
+  "topology": {
+    "name": "Connected mixed-degree 3-uniform hypergraph with planted XOR constraints",
+    "variables": 128,
+    "edges_or_factors": 86,
+    "degree_histogram": {
+      "2": 126,
+      "3": 2
+    },
+    "constraint_density": 0.671875,
+    "connected": true,
+    "encoded_cnf_clauses": 344,
+    "additional_encoding_variables": 0
+  },
+  "construction": {
+    "method": "Connected configuration model with variable degrees two and three; planted parity",
+    "generator_seed": 1240128013,
+    "rng": "numpy.random.default_rng, PCG64",
+    "source_campaign": "unified_planted_v23",
+    "generator_source": "experiments/common_pbits_800_v2/unified_planted_v23/generate.py",
+    "constraint_count": 86,
+    "minimum_variable_degree": 2,
+    "maximum_variable_degree": 3,
+    "distinct_variable_triples": true,
+    "connected": true,
+    "parity_selection": "XOR of the three bits in a uniformly sampled planted assignment",
+    "cnf_encoding": {
+      "clauses_per_constraint": 4,
+      "extra_variables": 0
+    },
+    "generator_source_sha256": "02b99e7ca4b20c5ff85b1d02e3ecd6a4933c03a3d2a1fe4d63bb91d870bdd504"
+  },
+  "mathematical_problem_sha256": "cea3793e9345a049e4d36a1b727868e7e1b1c226be6db4b08a60b93a9f76caa7",
+  "asic_case_id": null,
+  "constraints": [
+    {
+      "variables": [115, 85, 36],
+      "parity": 1
+    },
+    {
+      "variables": [88, 57, 83],
+      "parity": 0
+    },
+    {
+      "variables": [93, 7, 69],
+      "parity": 1
+    },
+    {
+      "variables": [119, 105, 67],
+      "parity": 1
+    },
+    {
+      "variables": [117, 20, 46],
+      "parity": 0
+    },
+    {
+      "variables": [55, 124, 116],
+      "parity": 1
+    },
+    {
+      "variables": [6, 49, 48],
+      "parity": 1
+    },
+    {
+      "variables": [100, 28, 47],
+      "parity": 1
+    },
+    {
+      "variables": [8, 80, 51],
+      "parity": 1
+    },
+    {
+      "variables": [71, 82, 39],
+      "parity": 0
+    },
+    {
+      "variables": [70, 110, 55],
+      "parity": 1
+    },
+    {
+      "variables": [56, 53, 17],
+      "parity": 0
+    },
+    {
+      "variables": [25, 79, 14],
+      "parity": 1
+    },
+    {
+      "variables": [29, 108, 101],
+      "parity": 0
+    },
+    {
+      "variables": [26, 24, 105],
+      "parity": 0
+    },
+    {
+      "variables": [40, 22, 59],
+      "parity": 1
+    },
+    {
+      "variables": [98, 60, 66],
+      "parity": 0
+    },
+    {
+      "variables": [127, 43, 13],
+      "parity": 1
+    },
+    {
+      "variables": [122, 87, 26],
+      "parity": 1
+    },
+    {
+      "variables": [22, 72, 63],
+      "parity": 1
+    },
+    {
+      "variables": [114, 2, 35],
+      "parity": 0
+    },
+    {
+      "variables": [73, 69, 27],
+      "parity": 1
+    },
+    {
+      "variables": [74, 47, 111],
+      "parity": 0
+    },
+    {
+      "variables": [111, 10, 62],
+      "parity": 1
+    },
+    {
+      "variables": [9, 34, 29],
+      "parity": 1
+    },
+    {
+      "variables": [91, 119, 88],
+      "parity": 1
+    },
+    {
+      "variables": [18, 94, 52],
+      "parity": 0
+    },
+    {
+      "variables": [97, 35, 54],
+      "parity": 0
+    },
+    {
+      "variables": [21, 91, 16],
+      "parity": 1
+    },
+    {
+      "variables": [78, 106, 49],
+      "parity": 1
+    },
+    {
+      "variables": [37, 65, 68],
+      "parity": 1
+    },
+    {
+      "variables": [60, 65, 116],
+      "parity": 1
+    },
+    {
+      "variables": [6, 25, 115],
+      "parity": 0
+    },
+    {
+      "variables": [107, 113, 103],
+      "parity": 0
+    },
+    {
+      "variables": [89, 21, 90],
+      "parity": 1
+    },
+    {
+      "variables": [20, 58, 40],
+      "parity": 1
+    },
+    {
+      "variables": [109, 1, 56],
+      "parity": 1
+    },
+    {
+      "variables": [5, 39, 121],
+      "parity": 1
+    },
+    {
+      "variables": [92, 99, 12],
+      "parity": 1
+    },
+    {
+      "variables": [123, 85, 51],
+      "parity": 1
+    },
+    {
+      "variables": [97, 68, 117],
+      "parity": 0
+    },
+    {
+      "variables": [81, 30, 93],
+      "parity": 1
+    },
+    {
+      "variables": [67, 7, 36],
+      "parity": 1
+    },
+    {
+      "variables": [28, 71, 38],
+      "parity": 1
+    },
+    {
+      "variables": [9, 13, 24],
+      "parity": 1
+    },
+    {
+      "variables": [31, 45, 95],
+      "parity": 0
+    },
+    {
+      "variables": [50, 52, 73],
+      "parity": 0
+    },
+    {
+      "variables": [89, 32, 96],
+      "parity": 1
+    },
+    {
+      "variables": [120, 12, 92],
+      "parity": 1
+    },
+    {
+      "variables": [124, 14, 23],
+      "parity": 0
+    },
+    {
+      "variables": [121, 2, 62],
+      "parity": 1
+    },
+    {
+      "variables": [98, 83, 8],
+      "parity": 0
+    },
+    {
+      "variables": [15, 61, 45],
+      "parity": 1
+    },
+    {
+      "variables": [125, 75, 112],
+      "parity": 1
+    },
+    {
+      "variables": [108, 118, 84],
+      "parity": 1
+    },
+    {
+      "variables": [116, 96, 110],
+      "parity": 0
+    },
+    {
+      "variables": [61, 82, 19],
+      "parity": 0
+    },
+    {
+      "variables": [43, 4, 0],
+      "parity": 0
+    },
+    {
+      "variables": [78, 64, 57],
+      "parity": 1
+    },
+    {
+      "variables": [86, 107, 104],
+      "parity": 1
+    },
+    {
+      "variables": [76, 3, 127],
+      "parity": 0
+    },
+    {
+      "variables": [80, 87, 0],
+      "parity": 1
+    },
+    {
+      "variables": [42, 37, 118],
+      "parity": 1
+    },
+    {
+      "variables": [94, 100, 44],
+      "parity": 1
+    },
+    {
+      "variables": [104, 109, 122],
+      "parity": 0
+    },
+    {
+      "variables": [1, 99, 63],
+      "parity": 0
+    },
+    {
+      "variables": [102, 106, 19],
+      "parity": 1
+    },
+    {
+      "variables": [33, 34, 4],
+      "parity": 0
+    },
+    {
+      "variables": [66, 81, 114],
+      "parity": 0
+    },
+    {
+      "variables": [112, 86, 53],
+      "parity": 1
+    },
+    {
+      "variables": [79, 30, 126],
+      "parity": 0
+    },
+    {
+      "variables": [84, 15, 42],
+      "parity": 1
+    },
+    {
+      "variables": [72, 123, 41],
+      "parity": 0
+    },
+    {
+      "variables": [38, 75, 70],
+      "parity": 1
+    },
+    {
+      "variables": [5, 120, 54],
+      "parity": 1
+    },
+    {
+      "variables": [74, 113, 11],
+      "parity": 1
+    },
+    {
+      "variables": [33, 46, 58],
+      "parity": 1
+    },
+    {
+      "variables": [59, 33, 77],
+      "parity": 0
+    },
+    {
+      "variables": [32, 16, 17],
+      "parity": 1
+    },
+    {
+      "variables": [10, 23, 27],
+      "parity": 0
+    },
+    {
+      "variables": [102, 18, 101],
+      "parity": 1
+    },
+    {
+      "variables": [41, 125, 31],
+      "parity": 1
+    },
+    {
+      "variables": [44, 50, 126],
+      "parity": 0
+    },
+    {
+      "variables": [48, 77, 64],
+      "parity": 1
+    },
+    {
+      "variables": [11, 3, 76],
+      "parity": 1
+    },
+    {
+      "variables": [90, 95, 103],
+      "parity": 1
+    }
+  ]
+}

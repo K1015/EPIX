@@ -1,0 +1,608 @@
+{
+  "schema_version": "epix.problem.v1",
+  "instance_id": "3hypergraph_sat32_instance16",
+  "group": "3hypergraph_sat32",
+  "original_instance_id": "sat_32_15",
+  "original_cohort_key": "sat_32_15",
+  "source_family": "sat",
+  "problem_type": "3sat",
+  "n_variables": 32,
+  "node_index_base": 0,
+  "variable_domain": [0, 1],
+  "objective": {
+    "name": "unsatisfied_sat_clauses",
+    "sense": "minimize",
+    "target": 0,
+    "formula": "count of clauses with no true literal",
+    "reference_energy": "unsatisfied clause count"
+  },
+  "topology": {
+    "name": "Random 3-uniform hypergraph with planted 3-SAT clauses",
+    "variables": 32,
+    "edges_or_factors": 138,
+    "degree_histogram": {
+      "4": 1,
+      "8": 2,
+      "9": 1,
+      "10": 4,
+      "11": 6,
+      "12": 3,
+      "13": 1,
+      "14": 1,
+      "15": 4,
+      "17": 6,
+      "18": 3
+    },
+    "clause_density": 4.3125
+  },
+  "construction": {
+    "method": "Conventional planted random 3-SAT",
+    "generator_seed": 1230032015,
+    "rng": "numpy.random.default_rng, PCG64",
+    "source_campaign": "unified_planted_v23",
+    "generator_source": "experiments/common_pbits_800_v2/unified_planted_v23/generate.py",
+    "clause_count": 138,
+    "clause_count_rule": "round(4.3 * N)",
+    "variable_selection": "Three distinct variables sampled uniformly for each clause",
+    "literal_selection": "Uniform choice among the seven patterns satisfying a uniformly sampled planted assignment",
+    "repeated_variable_triples": "Allowed across clauses; each clause is a separate constraint",
+    "generator_source_sha256": "02b99e7ca4b20c5ff85b1d02e3ecd6a4933c03a3d2a1fe4d63bb91d870bdd504"
+  },
+  "mathematical_problem_sha256": "2235ba3dcfef554e944a20abc2350017849a87fde8048bc46b1fb6f1c9232075",
+  "asic_case_id": null,
+  "literal_sign_convention": "+1 means x; -1 means NOT x",
+  "constraints": [
+    {
+      "variables": [2, 19, 1],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [26, 19, 4],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [13, 7, 25],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [9, 8, 16],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [1, 4, 23],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [21, 27, 8],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [21, 13, 9],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [8, 29, 4],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [15, 22, 20],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [26, 31, 14],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [6, 20, 2],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [9, 28, 14],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [24, 10, 30],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [24, 0, 1],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [16, 12, 11],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [13, 0, 1],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [27, 9, 21],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [3, 13, 0],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [20, 15, 28],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [21, 9, 6],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [28, 8, 29],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [1, 8, 17],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [15, 17, 0],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [5, 10, 17],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [6, 1, 22],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [26, 7, 25],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [5, 23, 7],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [3, 31, 12],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [8, 4, 10],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [5, 6, 14],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [25, 9, 13],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [9, 2, 30],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [15, 20, 29],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [13, 18, 30],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [1, 25, 16],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [19, 5, 30],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [13, 2, 6],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [30, 9, 0],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [1, 31, 23],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [28, 20, 17],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [4, 11, 8],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [13, 10, 25],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [5, 26, 15],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [25, 1, 7],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [0, 14, 30],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [29, 22, 3],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [0, 22, 10],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [1, 27, 11],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [22, 4, 18],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [10, 29, 6],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [4, 21, 31],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [28, 0, 20],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [1, 13, 27],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [7, 28, 16],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [16, 20, 17],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [27, 10, 1],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [16, 21, 18],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [7, 14, 27],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [10, 9, 20],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [8, 29, 26],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [14, 5, 3],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [29, 17, 10],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [15, 4, 14],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [24, 6, 16],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [23, 17, 4],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [14, 0, 12],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [8, 30, 24],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [15, 20, 5],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [22, 13, 8],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [24, 0, 8],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [6, 11, 31],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [11, 28, 5],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [9, 17, 19],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [14, 0, 27],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [30, 0, 25],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [22, 19, 21],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [17, 3, 10],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [10, 0, 29],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [9, 26, 17],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [17, 5, 31],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [15, 26, 6],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [14, 13, 6],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [5, 15, 1],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [25, 19, 22],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [31, 5, 13],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [9, 15, 4],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [24, 21, 14],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [29, 31, 7],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [21, 4, 28],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [14, 23, 22],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [17, 0, 26],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [2, 1, 6],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [6, 18, 3],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [19, 6, 22],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [11, 22, 9],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [8, 19, 22],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [11, 30, 14],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [14, 4, 13],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [28, 11, 23],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [30, 15, 21],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [24, 21, 14],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [11, 1, 29],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [4, 28, 15],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [3, 28, 15],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [8, 31, 25],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [15, 20, 19],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [8, 2, 13],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [11, 3, 12],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [26, 3, 24],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [13, 9, 31],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [1, 6, 7],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [4, 25, 28],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [15, 25, 3],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [11, 8, 20],
+      "signs": [-1, -1, 1]
+    },
+    {
+      "variables": [4, 15, 20],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [12, 10, 20],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [25, 12, 11],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [3, 23, 21],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [7, 16, 30],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [31, 13, 7],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [2, 4, 17],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [13, 16, 9],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [22, 20, 6],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [2, 15, 0],
+      "signs": [1, 1, 1]
+    },
+    {
+      "variables": [26, 15, 2],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [6, 13, 12],
+      "signs": [-1, -1, -1]
+    },
+    {
+      "variables": [8, 7, 2],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [9, 25, 24],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [22, 10, 12],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [2, 20, 27],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [12, 11, 6],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [20, 4, 1],
+      "signs": [1, -1, -1]
+    },
+    {
+      "variables": [22, 12, 7],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [25, 10, 9],
+      "signs": [-1, 1, 1]
+    },
+    {
+      "variables": [20, 8, 10],
+      "signs": [1, -1, 1]
+    },
+    {
+      "variables": [22, 6, 26],
+      "signs": [1, 1, -1]
+    },
+    {
+      "variables": [22, 16, 11],
+      "signs": [-1, 1, -1]
+    },
+    {
+      "variables": [11, 23, 24],
+      "signs": [-1, 1, -1]
+    }
+  ]
+}
