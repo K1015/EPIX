@@ -15,7 +15,7 @@ module tb_kings_graph #(
 `else
     localparam integer USE_EPIX = 0;
 `endif
-    localparam integer CYCLES_PER_UPDATE = 9;
+    localparam integer MAX_CYCLES_PER_UPDATE = 2;
     localparam integer EXPECTED_EDGES =
         ROWS * (COLS-1) + (ROWS-1) * COLS +
         2 * (ROWS-1) * (COLS-1);
@@ -25,6 +25,9 @@ module tb_kings_graph #(
     logic start;
     logic stop;
     logic [N-1:0] initial_state;
+    logic state_load_en;
+    logic [NODE_W-1:0] state_load_addr;
+    logic state_load_data;
     logic [31:0] seed;
     logic [31:0] update_limit;
     logic ready;
@@ -42,7 +45,7 @@ module tb_kings_graph #(
     kings_epix_solver #(
         .ROWS(ROWS), .COLS(COLS), .N(N), .NODE_W(NODE_W),
         .FIELD_W(FIELD_W), .PROB_GAIN(1024),
-        .DELTA_FIELD(2), .MAX_REUSE(2)
+        .DELTA_FIELD(0), .MAX_REUSE(2)
     ) dut (.*);
 `else
     kings_baseline_solver #(
@@ -187,6 +190,7 @@ module tb_kings_graph #(
         integer score;
         integer best_score;
         integer hit_updates;
+        integer hit_cycles;
         integer hit_fresh;
         integer previous_visits;
         integer watchdog_cycles;
@@ -197,6 +201,9 @@ module tb_kings_graph #(
         start = 1'b0;
         stop = 1'b0;
         initial_state = '0;
+        state_load_en = 1'b0;
+        state_load_addr = '0;
+        state_load_data = 1'b0;
         seed = 32'd1;
         update_limit = '0;
         trials = 4;
@@ -253,14 +260,15 @@ module tb_kings_graph #(
             best_score = cut_score(state_out);
             hit_updates = ((graph_optimum >= 0) &&
                            (best_score == graph_optimum)) ? 0 : -1;
+            hit_cycles = (hit_updates == 0) ? 0 : -1;
             hit_fresh = (hit_updates == 0) ? 0 : -1;
             previous_visits = 0;
             watchdog_cycles = 0;
             while (!done) begin
                 @(negedge clk);
                 watchdog_cycles = watchdog_cycles + 1;
-                if (watchdog_cycles > visit_budget * CYCLES_PER_UPDATE + 4)
-                    $fatal(1, "solver exceeded nine clocks/update");
+                if (watchdog_cycles > visit_budget * MAX_CYCLES_PER_UPDATE + 4)
+                    $fatal(1, "solver exceeded two clocks/update");
                 if (visits != previous_visits) begin
                     previous_visits = visits;
                     score = cut_score(state_out);
@@ -269,6 +277,7 @@ module tb_kings_graph #(
                     if ((graph_optimum >= 0) && (hit_updates < 0) &&
                         (score == graph_optimum)) begin
                         hit_updates = visits;
+                        hit_cycles = cycle_count;
                         hit_fresh = fresh_words;
                     end
                 end
@@ -284,7 +293,7 @@ module tb_kings_graph #(
                     ROWS, COLS, N, graph_edges, graph_optimum, trial, seed,
                     initial_state, visit_budget, best_score,
                     (hit_updates >= 0), hit_updates,
-                    (hit_updates >= 0) ? hit_updates*CYCLES_PER_UPDATE : -1,
+                    hit_cycles,
                     hit_fresh, fresh_words, reuse_events, cycle_count);
             else
                 $fwrite(output_fd,
@@ -292,7 +301,7 @@ module tb_kings_graph #(
                     ROWS, COLS, N, graph_edges, graph_optimum, trial, seed,
                     initial_state, visit_budget, best_score,
                     (hit_updates >= 0), hit_updates,
-                    (hit_updates >= 0) ? hit_updates*CYCLES_PER_UPDATE : -1,
+                    hit_cycles,
                     hit_fresh, fresh_words, reuse_events, cycle_count);
             $display(
                 "TRIAL mode=%s rows=%0d cols=%0d index=%0d best=%0d hit=%0d fresh=%0d cycles=%0d",

@@ -12,7 +12,8 @@ from statistics import mean
 
 
 MASK32 = (1 << 32) - 1
-CYCLES_PER_UPDATE = 9
+FIELD_CYCLES = 1
+BASELINE_CYCLES_PER_UPDATE = 2
 
 
 @dataclass(frozen=True)
@@ -57,7 +58,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--trials", type=int, default=4)
     parser.add_argument("--visits", type=int, default=20_000)
     parser.add_argument("--prob-gain", type=int, default=1024)
-    parser.add_argument("--delta-field", type=int, default=2)
+    parser.add_argument("--delta-field", type=int, default=0)
     parser.add_argument("--max-reuse", type=int, default=2)
     parser.add_argument("--campaign-seed", type=lambda x: int(x, 0), default=0x97128127)
     parser.add_argument("--output", type=Path, required=True)
@@ -168,13 +169,18 @@ def run_trial(
     current_cut = cut_score(graph, state)
     best_cut = current_cut
     hit_update = 0 if graph.optimum >= 0 and current_cut == graph.optimum else -1
+    hit_cycles = 0 if hit_update == 0 else -1
     hit_fresh = 0 if hit_update == 0 else -1
     pbit_rngs = [pbit_seed(seed, node) for node in range(n)]
     stored_fields = [0] * n
-    reuse_ages = [0] * n
-    word_valid = [False] * n
+    tag_width = max(1, (max_reuse + 1).bit_length())
+    tag_mask = (1 << tag_width) - 1
+    stored_tags = [0] * n
+    sweep_tag = 0
+    history_ready = False
     fresh_words = 0
     reuse_events = 0
+    total_cycles = 0
 
     for update in range(visits):
         node = update % n
@@ -182,32 +188,34 @@ def run_trial(
         refresh = True
         if mode == "epix":
             expected_state = 1 if field >= 0 else 0
+            age = (sweep_tag - stored_tags[node]) & tag_mask
             refresh = (
-                not word_valid[node]
+                not history_ready
                 or state[node] != expected_state
-                or abs(field - stored_fields[node]) >= delta_field
-                or reuse_ages[node] >= max_reuse
+                or abs(field - stored_fields[node]) > delta_field
+                or age > max_reuse
             )
 
-        sample_word = pbit_rngs[node]
-        if mode == "epix" and refresh and word_valid[node]:
-            sample_word = lfsr_step(sample_word)
-        threshold = max(0, min(65_535, 32_768 + field * prob_gain))
         old_state = state[node]
-        new_state = int((sample_word & 0xFFFF) < threshold)
+        new_state = old_state
+        total_cycles += FIELD_CYCLES
 
         if refresh:
+            total_cycles += 1
             fresh_words += 1
+            sample_word = pbit_rngs[node]
             if mode == "epix":
+                if history_ready:
+                    sample_word = lfsr_step(sample_word)
                 pbit_rngs[node] = sample_word
                 stored_fields[node] = field
-                reuse_ages[node] = 0
-                word_valid[node] = True
+                stored_tags[node] = sweep_tag
             else:
                 pbit_rngs[node] = lfsr_step(sample_word)
+            threshold = max(0, min(65_535, 32_768 + field * prob_gain))
+            new_state = int((sample_word & 0xFFFF) < threshold)
         else:
             reuse_events += 1
-            reuse_ages[node] = min(reuse_ages[node] + 1, max_reuse)
 
         if new_state != old_state:
             for neighbor in graph.adjacency[node]:
@@ -216,7 +224,11 @@ def run_trial(
         best_cut = max(best_cut, current_cut)
         if graph.optimum >= 0 and hit_update < 0 and current_cut == graph.optimum:
             hit_update = update + 1
+            hit_cycles = total_cycles
             hit_fresh = fresh_words
+        if node == n - 1:
+            sweep_tag = (sweep_tag + 1) & tag_mask
+            history_ready = True
 
     return Trial(
         engine="python_reference",
@@ -233,11 +245,11 @@ def run_trial(
         best_cut=best_cut,
         success=int(hit_update >= 0),
         first_hit_updates=hit_update,
-        first_hit_cycles=hit_update * CYCLES_PER_UPDATE if hit_update >= 0 else -1,
+        first_hit_cycles=hit_cycles,
         first_hit_fresh_words=hit_fresh,
         final_fresh_words=fresh_words,
         final_reuse_events=reuse_events,
-        total_cycles=visits * CYCLES_PER_UPDATE,
+        total_cycles=total_cycles,
     )
 
 
@@ -272,7 +284,8 @@ def main() -> None:
         "known_exact_maxcut": graph.optimum if graph.optimum >= 0 else None,
         "trials_per_mode": args.trials,
         "visit_budget": args.visits,
-        "cycles_per_update": CYCLES_PER_UPDATE,
+        "baseline_cycles_per_update": BASELINE_CYCLES_PER_UPDATE,
+        "epix_cycle_formula": "visits + fresh_words",
         "modes": {},
     }
     for mode in modes:
