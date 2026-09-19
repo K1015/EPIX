@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "scope": "Standalone PYNQ-Z1 examples and preserved physical verification evidence",
+  "examples": 4,
+  "variables_per_example": 26,
+  "original_physical_trials": 8000,
+  "notebook_recheck_physical_trials": 8,
+  "notebook_recheck_exact_hits": 8,
+  "notebook_recheck_date": "2026-09-18",
+  "new_physical_trials_during_reorganization": 0,
+  "offline_checks": [
+    "Deployment hashes and original 8000 trial records pass.",
+    "Executed notebooks and all eight same-seed comparisons pass.",
+    "The original inputs, images and raw results are unchanged. Runner formatting preserves the parsed program.",
+    "README links resolve and all READMEs contain no semicolons."
+  ],
+  "evidence_sha256": {
+    "results/board_examples.json": "6875ed13113687461e00be42d922176bec9e16efe9108f6ac183a8e41d5713e1",
+    "results/board_recheck/NOTEBOOK_VALIDATION.json": "29f737cb19fedab7b5eec962143a460c684e55ba1b6b007681394c28b01a2e78",
+    "results/board_recheck/REFERENCE_COMPARISON.json": "8dd9d455a1dd2f0d6bdcb57140ab2804c7bfcfe946c86d56b62112faff553c81",
+    "results/board_recheck/HOST_RECEIPT.json": "cb1e00bc25d615c3312db2e6b186021026ee5492ecfc952e5ffab50f07ded626"
+  },
+  "formatted_sources": {
+    "examples/chimera/run.py": {
+      "before_sha256": "097f10f6cd75127272027b744e4af078e7d5d377ff9336d2761a9d09d0a5dccd",
+      "after_sha256": "409015ca5dfe3701dfd7aed475826c5b25d1d5ba5a666801cdbad05ce8da6223",
+      "ast_equivalent": true
+    },
+    "examples/maxcut/run.py": {
+      "before_sha256": "2fa9a654c652e9f624a8965b197a7a6b541c0141a1e7442d06caed6dd84f1f8b",
+      "after_sha256": "db9d5637934677d28096b8056dbcb26415621ee477793751c435cbad4e6c8735",
+      "ast_equivalent": true
+    },
+    "examples/sat/run.py": {
+      "before_sha256": "2bce3996fca554feadbe79696c53296e0e1470295c03a9a6e823c14484afab1b",
+      "after_sha256": "9f6b58f2318b97eefc94ea0530c9e029d0c07df2fadca5598b7c5a00e12a4d81",
+      "ast_equivalent": true
+    },
+    "examples/xorsat/run.py": {
+      "before_sha256": "822cfff6e66af6a72b7955decfc420346fd9309eb81bbbada083acb2a962cfef",
+      "after_sha256": "5f06b2cdd71d2cdeddcd22c12d2367c37d3d25a4f36fc6a59c81ed4868c4f5f6",
+      "ast_equivalent": true
+    }
+  },
+  "python_readability": {
+    "formatted_files": 19,
+    "changes": "Expanded statements, separate imports, blank lines and explanatory comments.",
+    "behavior_check": "The parsed programs match before and after formatting. Combined imports are normalized before comparison.",
+    "scope": "Formatting preserves parsed programs. The source-identity checks also accept the explicitly audited runner revisions."
+  },
+  "privacy_cleanup": {
+    "status": "PASS",
+    "changes": "Connection details are replaced by variables. Published notebook copies use relative display paths. Original source hashes remain in the notebook receipt.",
+    "raw_trials_and_hardware_files_unchanged": true,
+    "new_physical_board_trials": 0
+  }
+}

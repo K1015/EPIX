@@ -1,0 +1,72 @@
+{
+  "status": "COMPLETE",
+  "scope": "100 software instances, exact targets, FPGA input tables and software checks",
+  "families": [
+    "maxcut",
+    "chimera",
+    "sat",
+    "xorsat"
+  ],
+  "sizes": [
+    8,
+    14,
+    20,
+    26,
+    32
+  ],
+  "instances_per_family_size": 5,
+  "total_instances": 100,
+  "auxiliary_variables": 0,
+  "hex_files": 200,
+  "clause_definition_files": 50,
+  "retained_inputs": 58,
+  "new_native_inputs": 32,
+  "new_graph_inputs": 10,
+  "paired_software_trials_per_case": 3,
+  "software_method_trials": 600,
+  "new_fpga_bitstreams": 0,
+  "required_rtl_changes": [
+    "Update per-case dimensions and target constants before build.",
+    "sat_n32_i03 needs 5-bit break indices and a 32768-entry mass ROM."
+  ],
+  "graph32_scope": "Structural continuation of smaller graph families; exact historical generation distribution not reconstructed.",
+  "manifest_sha256": "5cee72cadd9c1f48c37f81d5d541c42a3a8f7d24fca93fe7d533f4e67a9b7648",
+  "reports": {
+    "testbench/validation/input_validation.json": "c8d26bd6040a34fc948a25106ce558bcd6f2322cb8259b615cc442bf7d3094d0",
+    "testbench/validation/reproduction.json": "7d04de20512b060b1def1bd661259018b1a0fdf10f0211f93fc5f19bf88ed71c",
+    "testbench/validation/model_validation.json": "6fbfea2e22c6de1c9d4b363fc6af09431c63ce087619a4e246ba24a78d94ae7b",
+    "testbench/validation/software_smoke/summary.json": "99172d72bb9ffe85c70520457eb947a6d34f442b4ec3b16159af7b752d359974"
+  },
+  "layout": "cases, hex_generation, testbench, pynq_verification",
+  "hardware_verification_package": "pynq_verification",
+  "python_readability": {
+    "formatted_files": 7,
+    "behavior_check": "The parsed programs match before and after formatting. Combined imports are normalized before comparison."
+  },
+  "privacy_audit": {
+    "status": "PASS",
+    "scope": "All package files, notebook outputs and metadata, printable bitstream headers, path strings, and archive members.",
+    "files_scanned": 1062,
+    "remaining_pattern_findings": 0,
+    "patterns_checked": [
+      "personal_names",
+      "home_directory",
+      "windows_home",
+      "email",
+      "mac_address",
+      "private_key",
+      "credential_token",
+      "ipv4"
+    ],
+    "portable_variables": [
+      "ROOT",
+      "BOARD_HOST",
+      "BOARD_DIR",
+      "PYNQ_PYTHON",
+      "BUILD_DIR",
+      "NOTEBOOK_RESULTS_DIR",
+      "PYNQ_BOARD_LOCK"
+    ],
+    "hardware_files_and_raw_trials_unchanged": true
+  }
+}
